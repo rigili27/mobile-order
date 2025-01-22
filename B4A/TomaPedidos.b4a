@@ -1,0 +1,142 @@
+﻿Build1=TomaPedidos,b4a.bitdesing.tomapedidos
+File1=customer_item_layout.bal
+File10=order_product_item_layout.bal
+File11=orders_layout.bal
+File12=product_item_layout.bal
+File13=products_add_order_item_layout.bal
+File14=products_layout.bal
+File15=scan_layout.bal
+File16=settings_layout.bal
+File17=t.point mobile order.jpg
+File2=customers_layout.bal
+File3=home_layout.bal
+File4=login_layout.bal
+File5=MainPage.bal
+File6=moviles.db
+File7=order_item_layout.bal
+File8=order_layout.bal
+File9=order_list_items_layout.bal
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup17=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=b4xpages
+Library10=runtimepermissions
+Library11=sql
+Library12=xcustomlistview
+Library13=xui
+Library14=xui views
+Library15=contentresolver
+Library2=camera
+Library3=core
+Library4=fileprovider
+Library5=javaobject
+Library6=net
+Library7=network
+Library8=randomaccessfile
+Library9=reflection
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~~\n~AddApplicationText(<meta-data~\n~    android:name="com.google.android.gms.vision.DEPENDENCIES"~\n~    android:value="barcode,,face" />~\n~)~\n~CreateResourceFromFile(Macro, FirebaseAnalytics.GooglePlayBase)~\n~~\n~'esto funciona~\n~'SetApplicationAttribute(android:requestLegacyExternalStorage, true)~\n~'AddApplicationText(~\n~'  <provider~\n~'  android:name="android.support.v4.content.FileProvider"~\n~'  android:authorities="$PACKAGE$.provider"~\n~'  android:exported="false"~\n~'  android:grantUriPermissions="true">~\n~'  <meta-data~\n~'  android:name="android.support.FILE_PROVIDER_PATHS"~\n~'  android:resource="@xml/provider_paths"/>~\n~'  </provider>~\n~')~\n~'CreateResource(xml, provider_paths,~\n~'   <files-path name="name" path="shared" />~\n~')~\n~~\n~'nuevo~\n~SetApplicationAttribute(android:requestLegacyExternalStorage, true)~\n~AddApplicationText(~\n~  <provider~\n~    android:name="androidx.core.content.FileProvider"~\n~    android:authorities="$PACKAGE$.provider"~\n~    android:exported="false"~\n~    android:grantUriPermissions="true">~\n~    <meta-data~\n~        android:name="android.support.FILE_PROVIDER_PATHS"~\n~        android:resource="@xml/provider_paths"/>~\n~</provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <?xml version="1.0" encoding="utf-8"?>~\n~<paths xmlns:android="http://schemas.android.com/apk/res/android">~\n~    <external-path name="external_files" path="." />~\n~</paths>~\n~)~\n~~\n~~\n~
+Module1=AsyncStreamsText
+Module10=order_c
+Module11=orders_c
+Module12=products_c
+Module13=scan_c
+Module14=settings_c
+Module15=Starter
+Module2=|relative|..\B4XMainPage
+Module3=CameraExClass
+Module4=customers_c
+Module5=FTPClient
+Module6=FTPDataConnection
+Module7=FTPServer
+Module8=home_c
+Module9=login_c
+NumberOfFiles=17
+NumberOfLibraries=15
+NumberOfModules=15
+Version=13
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: toma pedidos
+	#VersionCode: 1
+	#VersionName: 1.0.1-beta
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+'#BridgeLogger: True
+
+#AdditionalJar: com.google.android.gms:play-services-vision
+
+Sub Process_Globals
+	Public ActionBarHomeClicked As Boolean
+End Sub
+
+Sub Globals
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Dim pm As B4XPagesManager
+	pm.Initialize(Activity)
+End Sub
+
+'Template version: B4A-1.01
+#Region Delegates
+
+Sub Activity_ActionBarHomeClick
+	ActionBarHomeClicked = True
+	B4XPages.Delegate.Activity_ActionBarHomeClick
+	ActionBarHomeClicked = False
+End Sub
+
+Sub Activity_KeyPress (KeyCode As Int) As Boolean
+	Return B4XPages.Delegate.Activity_KeyPress(KeyCode)
+End Sub
+
+Sub Activity_Resume
+	B4XPages.Delegate.Activity_Resume
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+	B4XPages.Delegate.Activity_Pause
+End Sub
+
+Sub Activity_PermissionResult (Permission As String, Result As Boolean)
+	B4XPages.Delegate.Activity_PermissionResult(Permission, Result)
+End Sub
+
+Sub Create_Menu (Menu As Object)
+	B4XPages.Delegate.Create_Menu(Menu)
+End Sub
+
+#if Java
+public boolean _onCreateOptionsMenu(android.view.Menu menu) {
+	 processBA.raiseEvent(null, "create_menu", menu);
+	 return true;
+	
+}
+#End If
+#End Region
+
+'Program code should go into B4XMainPage and other pages.
