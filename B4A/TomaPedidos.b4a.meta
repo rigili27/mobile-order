@@ -46,6 +46,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=B4XMainPage,Button1_Click,91,1,Starter,GetFileUri,167,0,Diseñador Visual,settings_layout.bal,-100,3,Starter,ShareDataBase,140,0,settings_c,FTP_DownloadCompleted,110,0,settings_c,btnShare_Click,118,3,order_c,txtSearch_TextChanged,115,0,order_c,B4XPage_Appear,73,0,order_c,Activity_KeyPress,76,0,order_c,B4XPage_Created,67,0,Main,Globals,22,0
+NavigationStack=order_c,Activity_KeyPress,76,0,Main,Globals,22,0,order_c,Class_Globals,0,0,products_c,clvProducts_ItemClick,151,0,products_c,Class_Globals,29,0,orders_c,Class_Globals,0,0,order_c,b4xpage_MenuClick,186,0,order_c,B4XPage_Appear,75,4,order_c,B4XPage_Created,47,0,Main,Activity_Create,27,0
 SelectedBuild=0
 VisibleModules=2,15,9,12,11,10,4,14,13,8
