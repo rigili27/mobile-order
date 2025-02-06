@@ -80,25 +80,30 @@ COMENTARIO = "";
 			return BA.TypeToString(this, false);
 		}}
 public boolean  _activity_keypress(int _keycode) throws Exception{
- //BA.debugLineNum = 77;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
- //BA.debugLineNum = 78;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+ //BA.debugLineNum = 81;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 82;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==__c.KeyCodes.KEYCODE_BACK) { 
- //BA.debugLineNum = 79;BA.debugLine="If dialog.Close(xui.DialogResponse_Cancel) Then";
+ //BA.debugLineNum = 83;BA.debugLine="If dialog.Close(xui.DialogResponse_Cancel) Then";
 if (_dialog._close /*boolean*/ (_xui.DialogResponse_Cancel)) { 
 if (true) return __c.True;};
  };
- //BA.debugLineNum = 81;BA.debugLine="Return False";
+ //BA.debugLineNum = 85;BA.debugLine="Return False";
 if (true) return __c.False;
- //BA.debugLineNum = 82;BA.debugLine="End Sub";
+ //BA.debugLineNum = 86;BA.debugLine="End Sub";
 return false;
 }
 public String  _b4xpage_appear() throws Exception{
+b4a.bitdesing.tomapedidos.products_c _products_page = null;
  //BA.debugLineNum = 72;BA.debugLine="Sub B4XPage_Appear";
  //BA.debugLineNum = 73;BA.debugLine="txtSearch_TextChanged(\"\", \"\", Order)";
 _txtsearch_textchanged("","",_order);
  //BA.debugLineNum = 74;BA.debugLine="B4XPages.SetTitle(Me, \"Pedido nro: \" & Order.ID)";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Pedido nro: "+BA.NumberToString(_order.ID /*int*/ )));
- //BA.debugLineNum = 75;BA.debugLine="End Sub";
+ //BA.debugLineNum = 77;BA.debugLine="Dim products_page As products_c = B4XPages.GetPag";
+_products_page = (b4a.bitdesing.tomapedidos.products_c)(_b4xpages._getpage /*Object*/ (ba,"products_page"));
+ //BA.debugLineNum = 78;BA.debugLine="products_page.CallOf = \"\"";
+_products_page._callof /*String*/  = "";
+ //BA.debugLineNum = 79;BA.debugLine="End Sub";
 return "";
 }
 public String  _b4xpage_created(anywheresoftware.b4a.objects.B4XViewWrapper _root1) throws Exception{
@@ -110,7 +115,7 @@ _root = _root1;
  //BA.debugLineNum = 49;BA.debugLine="Root.LoadLayout(\"order_layout\")";
 _root.LoadLayout("order_layout",ba);
  //BA.debugLineNum = 50;BA.debugLine="Log(\"create order page\")";
-__c.LogImpl("734013187","create order page",0);
+__c.LogImpl("533751043","create order page",0);
  //BA.debugLineNum = 53;BA.debugLine="B4XPages.SetTitle(Me, \"Pedido\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Pedido"));
  //BA.debugLineNum = 54;BA.debugLine="B4XPages.AddMenuItem(Me, \"Recibe\")";
@@ -167,7 +172,7 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 185;BA.debugLine="If Tag = \"Agregar\" Then";
+ //BA.debugLineNum = 189;BA.debugLine="If Tag = \"Agregar\" Then";
 if (true) break;
 
 case 1:
@@ -186,36 +191,36 @@ this.state = 17;
 case 3:
 //C
 this.state = 29;
- //BA.debugLineNum = 187;BA.debugLine="Dim products_page As products_c = B4XPages.GetPa";
+ //BA.debugLineNum = 191;BA.debugLine="Dim products_page As products_c = B4XPages.GetPa";
 _products_page = (b4a.bitdesing.tomapedidos.products_c)(parent._b4xpages._getpage /*Object*/ (ba,"products_page"));
- //BA.debugLineNum = 188;BA.debugLine="products_page.CallOf = \"order_page\"";
+ //BA.debugLineNum = 192;BA.debugLine="products_page.CallOf = \"order_page\"";
 _products_page._callof /*String*/  = "order_page";
- //BA.debugLineNum = 189;BA.debugLine="products_page.Order = Order";
+ //BA.debugLineNum = 193;BA.debugLine="products_page.Order = Order";
 _products_page._order /*b4a.bitdesing.tomapedidos.orders_c._ordersdata*/  = parent._order;
- //BA.debugLineNum = 191;BA.debugLine="B4XPages.ShowPage(\"products_page\")";
+ //BA.debugLineNum = 195;BA.debugLine="B4XPages.ShowPage(\"products_page\")";
 parent._b4xpages._showpage /*String*/ (ba,"products_page");
  if (true) break;
 
 case 5:
 //C
 this.state = 6;
- //BA.debugLineNum = 195;BA.debugLine="dialog.Initialize(Root)";
+ //BA.debugLineNum = 199;BA.debugLine="dialog.Initialize(Root)";
 parent._dialog._initialize /*String*/ (ba,parent._root);
- //BA.debugLineNum = 196;BA.debugLine="dialog.Title = \"Recibe\"";
+ //BA.debugLineNum = 200;BA.debugLine="dialog.Title = \"Recibe\"";
 parent._dialog._title /*Object*/  = (Object)("Recibe");
- //BA.debugLineNum = 198;BA.debugLine="Dim input As B4XInputTemplate";
+ //BA.debugLineNum = 202;BA.debugLine="Dim input As B4XInputTemplate";
 _input = new b4a.bitdesing.tomapedidos.b4xinputtemplate();
- //BA.debugLineNum = 199;BA.debugLine="input.Initialize";
+ //BA.debugLineNum = 203;BA.debugLine="input.Initialize";
 _input._initialize /*String*/ (ba);
- //BA.debugLineNum = 200;BA.debugLine="input.lblTitle.Text = \"Recibe el pedido\"";
+ //BA.debugLineNum = 204;BA.debugLine="input.lblTitle.Text = \"Recibe el pedido\"";
 _input._lbltitle /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setText(BA.ObjectToCharSequence("Recibe el pedido"));
- //BA.debugLineNum = 201;BA.debugLine="input.Text = QuienRecibe";
+ //BA.debugLineNum = 205;BA.debugLine="input.Text = QuienRecibe";
 _input._text /*String*/  = parent._quienrecibe;
- //BA.debugLineNum = 202;BA.debugLine="input.mBase.Width = 90%x";
+ //BA.debugLineNum = 206;BA.debugLine="input.mBase.Width = 90%x";
 _input._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setWidth(parent.__c.PerXToCurrent((float) (90),ba));
- //BA.debugLineNum = 203;BA.debugLine="input.TextField1.Width = 85%x";
+ //BA.debugLineNum = 207;BA.debugLine="input.TextField1.Width = 85%x";
 _input._textfield1 /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setWidth(parent.__c.PerXToCurrent((float) (85),ba));
- //BA.debugLineNum = 204;BA.debugLine="Wait For (dialog.ShowTemplate(input, \"OK\", \"\", \"";
+ //BA.debugLineNum = 208;BA.debugLine="Wait For (dialog.ShowTemplate(input, \"OK\", \"\", \"";
 parent.__c.WaitFor("complete", ba, this, parent._dialog._showtemplate /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ ((Object)(_input),(Object)("OK"),(Object)(""),(Object)("CANCEL")));
 this.state = 30;
 return;
@@ -224,7 +229,7 @@ case 30:
 this.state = 6;
 _result = (Integer) result[0];
 ;
- //BA.debugLineNum = 205;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
+ //BA.debugLineNum = 209;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
 if (true) break;
 
 case 6:
@@ -237,11 +242,11 @@ this.state = 8;
 case 8:
 //C
 this.state = 9;
- //BA.debugLineNum = 206;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
+ //BA.debugLineNum = 210;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
 parent._sql.Initialize(parent._starter._route /*String*/ ,parent._starter._database /*String*/ ,parent.__c.True);
- //BA.debugLineNum = 207;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedCMovil SET QUIENRE";
+ //BA.debugLineNum = 211;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedCMovil SET QUIENRE";
 parent._sql.ExecNonQuery2("UPDATE PedCMovil SET QUIENRECIBIO=? WHERE ID=?",anywheresoftware.b4a.keywords.Common.ArrayToList(new String[]{_input._text /*String*/ ,parent._ftxtorderid._gettext /*String*/ ()}));
- //BA.debugLineNum = 210;BA.debugLine="B4XPage_Appear";
+ //BA.debugLineNum = 214;BA.debugLine="B4XPage_Appear";
 parent._b4xpage_appear();
  if (true) break;
 
@@ -254,29 +259,29 @@ this.state = 29;
 case 11:
 //C
 this.state = 12;
- //BA.debugLineNum = 215;BA.debugLine="dialog.Initialize(Root)";
+ //BA.debugLineNum = 219;BA.debugLine="dialog.Initialize(Root)";
 parent._dialog._initialize /*String*/ (ba,parent._root);
- //BA.debugLineNum = 216;BA.debugLine="dialog.Title = \"Comentarios\"";
+ //BA.debugLineNum = 220;BA.debugLine="dialog.Title = \"Comentarios\"";
 parent._dialog._title /*Object*/  = (Object)("Comentarios");
- //BA.debugLineNum = 218;BA.debugLine="Dim input As B4XInputTemplate";
+ //BA.debugLineNum = 222;BA.debugLine="Dim input As B4XInputTemplate";
 _input = new b4a.bitdesing.tomapedidos.b4xinputtemplate();
- //BA.debugLineNum = 219;BA.debugLine="input.Initialize";
+ //BA.debugLineNum = 223;BA.debugLine="input.Initialize";
 _input._initialize /*String*/ (ba);
- //BA.debugLineNum = 220;BA.debugLine="input.lblTitle.Text = \"Comentarios\"";
+ //BA.debugLineNum = 224;BA.debugLine="input.lblTitle.Text = \"Comentarios\"";
 _input._lbltitle /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setText(BA.ObjectToCharSequence("Comentarios"));
- //BA.debugLineNum = 221;BA.debugLine="input.Text = ftxtComent";
+ //BA.debugLineNum = 225;BA.debugLine="input.Text = ftxtComent";
 _input._text /*String*/  = parent._ftxtcoment;
- //BA.debugLineNum = 222;BA.debugLine="input.mBase.Width = 90%x";
+ //BA.debugLineNum = 226;BA.debugLine="input.mBase.Width = 90%x";
 _input._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setWidth(parent.__c.PerXToCurrent((float) (90),ba));
- //BA.debugLineNum = 223;BA.debugLine="input.mBase.Height = 140dip";
+ //BA.debugLineNum = 227;BA.debugLine="input.mBase.Height = 140dip";
 _input._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setHeight(parent.__c.DipToCurrent((int) (140)));
- //BA.debugLineNum = 224;BA.debugLine="input.TextField1.Width = 85%x";
+ //BA.debugLineNum = 228;BA.debugLine="input.TextField1.Width = 85%x";
 _input._textfield1 /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setWidth(parent.__c.PerXToCurrent((float) (85),ba));
- //BA.debugLineNum = 225;BA.debugLine="input.TextField1.Height = 80dip";
+ //BA.debugLineNum = 229;BA.debugLine="input.TextField1.Height = 80dip";
 _input._textfield1 /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setHeight(parent.__c.DipToCurrent((int) (80)));
- //BA.debugLineNum = 226;BA.debugLine="input.TextField1.SetTextAlignment(\"TOP\", \"LEFT\")";
+ //BA.debugLineNum = 230;BA.debugLine="input.TextField1.SetTextAlignment(\"TOP\", \"LEFT\")";
 _input._textfield1 /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetTextAlignment("TOP","LEFT");
- //BA.debugLineNum = 227;BA.debugLine="Wait For (dialog.ShowTemplate(input, \"OK\", \"\", \"";
+ //BA.debugLineNum = 231;BA.debugLine="Wait For (dialog.ShowTemplate(input, \"OK\", \"\", \"";
 parent.__c.WaitFor("complete", ba, this, parent._dialog._showtemplate /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ ((Object)(_input),(Object)("OK"),(Object)(""),(Object)("CANCEL")));
 this.state = 31;
 return;
@@ -285,7 +290,7 @@ case 31:
 this.state = 12;
 _result = (Integer) result[0];
 ;
- //BA.debugLineNum = 228;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
+ //BA.debugLineNum = 232;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
 if (true) break;
 
 case 12:
@@ -298,11 +303,11 @@ this.state = 14;
 case 14:
 //C
 this.state = 15;
- //BA.debugLineNum = 229;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
+ //BA.debugLineNum = 233;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
 parent._sql.Initialize(parent._starter._route /*String*/ ,parent._starter._database /*String*/ ,parent.__c.True);
- //BA.debugLineNum = 230;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedCMovil SET COMENTA";
+ //BA.debugLineNum = 234;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedCMovil SET COMENTA";
 parent._sql.ExecNonQuery2("UPDATE PedCMovil SET COMENTARIOS=? WHERE ID=?",anywheresoftware.b4a.keywords.Common.ArrayToList(new String[]{_input._text /*String*/ ,parent._ftxtorderid._gettext /*String*/ ()}));
- //BA.debugLineNum = 233;BA.debugLine="B4XPage_Appear";
+ //BA.debugLineNum = 237;BA.debugLine="B4XPage_Appear";
 parent._b4xpage_appear();
  if (true) break;
 
@@ -315,15 +320,15 @@ this.state = 29;
 case 17:
 //C
 this.state = 18;
- //BA.debugLineNum = 238;BA.debugLine="dialog.Initialize(Root)";
+ //BA.debugLineNum = 242;BA.debugLine="dialog.Initialize(Root)";
 parent._dialog._initialize /*String*/ (ba,parent._root);
- //BA.debugLineNum = 239;BA.debugLine="dialog.Title = \"Firma\"";
+ //BA.debugLineNum = 243;BA.debugLine="dialog.Title = \"Firma\"";
 parent._dialog._title /*Object*/  = (Object)("Firma");
- //BA.debugLineNum = 241;BA.debugLine="Dim signature As B4XSignatureTemplate";
+ //BA.debugLineNum = 245;BA.debugLine="Dim signature As B4XSignatureTemplate";
 _signature = new b4a.bitdesing.tomapedidos.b4xsignaturetemplate();
- //BA.debugLineNum = 242;BA.debugLine="signature.Initialize";
+ //BA.debugLineNum = 246;BA.debugLine="signature.Initialize";
 _signature._initialize /*String*/ (ba);
- //BA.debugLineNum = 247;BA.debugLine="If Firma.IsInitialized Then";
+ //BA.debugLineNum = 251;BA.debugLine="If Firma.IsInitialized Then";
 if (true) break;
 
 case 18:
@@ -338,11 +343,11 @@ this.state = 22;
 case 20:
 //C
 this.state = 23;
- //BA.debugLineNum = 248;BA.debugLine="Log(\"firma ok\")";
-parent.__c.LogImpl("734340928","firma ok",0);
- //BA.debugLineNum = 249;BA.debugLine="signature.mBase.SetBitmap(Firma)";
+ //BA.debugLineNum = 252;BA.debugLine="Log(\"firma ok\")";
+parent.__c.LogImpl("534078784","firma ok",0);
+ //BA.debugLineNum = 253;BA.debugLine="signature.mBase.SetBitmap(Firma)";
 _signature._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetBitmap((android.graphics.Bitmap)(parent._firma.getObject()));
- //BA.debugLineNum = 250;BA.debugLine="Wait For (dialog.ShowTemplate(signature, \"\", \"B";
+ //BA.debugLineNum = 254;BA.debugLine="Wait For (dialog.ShowTemplate(signature, \"\", \"B";
 parent.__c.WaitFor("complete", ba, this, parent._dialog._showtemplate /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ ((Object)(_signature),(Object)(""),(Object)("BORRAR"),(Object)("CANCEL")));
 this.state = 32;
 return;
@@ -356,7 +361,7 @@ _result = (Integer) result[0];
 case 22:
 //C
 this.state = 23;
- //BA.debugLineNum = 253;BA.debugLine="Wait For (dialog.ShowTemplate(signature, \"OK\",";
+ //BA.debugLineNum = 257;BA.debugLine="Wait For (dialog.ShowTemplate(signature, \"OK\",";
 parent.__c.WaitFor("complete", ba, this, parent._dialog._showtemplate /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ ((Object)(_signature),(Object)("OK"),(Object)(""),(Object)("CANCEL")));
 this.state = 33;
 return;
@@ -367,7 +372,7 @@ _result = (Integer) result[0];
 ;
  if (true) break;
 ;
- //BA.debugLineNum = 257;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
+ //BA.debugLineNum = 261;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
 
 case 23:
 //if
@@ -381,35 +386,35 @@ this.state = 27;
 case 25:
 //C
 this.state = 28;
- //BA.debugLineNum = 260;BA.debugLine="Dim OutputStream1 As OutputStream";
+ //BA.debugLineNum = 264;BA.debugLine="Dim OutputStream1 As OutputStream";
 _outputstream1 = new anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper();
- //BA.debugLineNum = 261;BA.debugLine="OutputStream1.InitializeToBytesArray(1000)";
+ //BA.debugLineNum = 265;BA.debugLine="OutputStream1.InitializeToBytesArray(1000)";
 _outputstream1.InitializeToBytesArray((int) (1000));
- //BA.debugLineNum = 262;BA.debugLine="Dim Buffer() As Byte";
+ //BA.debugLineNum = 266;BA.debugLine="Dim Buffer() As Byte";
 _buffer = new byte[(int) (0)];
 ;
- //BA.debugLineNum = 263;BA.debugLine="signature.Bitmap.WriteToStream(OutputStream1, 9";
+ //BA.debugLineNum = 267;BA.debugLine="signature.Bitmap.WriteToStream(OutputStream1, 9";
 _signature._getbitmap /*anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper*/ ().WriteToStream((java.io.OutputStream)(_outputstream1.getObject()),(int) (90),BA.getEnumFromString(android.graphics.Bitmap.CompressFormat.class,"JPEG"));
- //BA.debugLineNum = 264;BA.debugLine="Buffer = OutputStream1.ToBytesArray";
+ //BA.debugLineNum = 268;BA.debugLine="Buffer = OutputStream1.ToBytesArray";
 _buffer = _outputstream1.ToBytesArray();
- //BA.debugLineNum = 266;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
+ //BA.debugLineNum = 270;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
 parent._sql.Initialize(parent._starter._route /*String*/ ,parent._starter._database /*String*/ ,parent.__c.True);
- //BA.debugLineNum = 267;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedCMovil SET FIRMA=?";
+ //BA.debugLineNum = 271;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedCMovil SET FIRMA=?";
 parent._sql.ExecNonQuery2("UPDATE PedCMovil SET FIRMA=? WHERE ID=?",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_buffer),(Object)(parent._ftxtorderid._gettext /*String*/ ())}));
- //BA.debugLineNum = 270;BA.debugLine="B4XPage_Appear";
+ //BA.debugLineNum = 274;BA.debugLine="B4XPage_Appear";
 parent._b4xpage_appear();
  if (true) break;
 
 case 27:
 //C
 this.state = 28;
- //BA.debugLineNum = 273;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
+ //BA.debugLineNum = 277;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
 parent._sql.Initialize(parent._starter._route /*String*/ ,parent._starter._database /*String*/ ,parent.__c.True);
- //BA.debugLineNum = 274;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedCMovil SET FIRMA=?";
+ //BA.debugLineNum = 278;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedCMovil SET FIRMA=?";
 parent._sql.ExecNonQuery2("UPDATE PedCMovil SET FIRMA=? WHERE ID=?",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{parent.__c.Null,(Object)(parent._ftxtorderid._gettext /*String*/ ())}));
- //BA.debugLineNum = 277;BA.debugLine="B4XPage_Appear";
+ //BA.debugLineNum = 281;BA.debugLine="B4XPage_Appear";
 parent._b4xpage_appear();
- //BA.debugLineNum = 278;BA.debugLine="b4xpage_MenuClick(\"Firma\")";
+ //BA.debugLineNum = 282;BA.debugLine="b4xpage_MenuClick(\"Firma\")";
 parent._b4xpage_menuclick("Firma");
  if (true) break;
 
@@ -423,7 +428,7 @@ case 29:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 282;BA.debugLine="End Sub";
+ //BA.debugLineNum = 286;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -433,10 +438,10 @@ if (true) break;
 public void  _complete(int _result) throws Exception{
 }
 public String  _btnaddproduct_click() throws Exception{
- //BA.debugLineNum = 342;BA.debugLine="Private Sub btnAddProduct_Click";
- //BA.debugLineNum = 343;BA.debugLine="b4xpage_MenuClick(\"Agregar\")";
+ //BA.debugLineNum = 346;BA.debugLine="Private Sub btnAddProduct_Click";
+ //BA.debugLineNum = 347;BA.debugLine="b4xpage_MenuClick(\"Agregar\")";
 _b4xpage_menuclick("Agregar");
- //BA.debugLineNum = 344;BA.debugLine="End Sub";
+ //BA.debugLineNum = 348;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals() throws Exception{
@@ -518,36 +523,36 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 309;BA.debugLine="dialog.Initialize(Root)";
+ //BA.debugLineNum = 313;BA.debugLine="dialog.Initialize(Root)";
 parent._dialog._initialize /*String*/ (ba,parent._root);
- //BA.debugLineNum = 310;BA.debugLine="dialog.Title = \"Editar item\"";
+ //BA.debugLineNum = 314;BA.debugLine="dialog.Title = \"Editar item\"";
 parent._dialog._title /*Object*/  = (Object)("Editar item");
- //BA.debugLineNum = 312;BA.debugLine="dialog.BackgroundColor = Colors.White";
+ //BA.debugLineNum = 316;BA.debugLine="dialog.BackgroundColor = Colors.White";
 parent._dialog._backgroundcolor /*int*/  = parent.__c.Colors.White;
- //BA.debugLineNum = 313;BA.debugLine="dialog.ButtonsColor = Colors.Transparent";
+ //BA.debugLineNum = 317;BA.debugLine="dialog.ButtonsColor = Colors.Transparent";
 parent._dialog._buttonscolor /*int*/  = parent.__c.Colors.Transparent;
- //BA.debugLineNum = 314;BA.debugLine="dialog.ButtonsTextColor = Colors.Black";
+ //BA.debugLineNum = 318;BA.debugLine="dialog.ButtonsTextColor = Colors.Black";
 parent._dialog._buttonstextcolor /*int*/  = parent.__c.Colors.Black;
- //BA.debugLineNum = 316;BA.debugLine="Dim ID As ItemsData = Value";
+ //BA.debugLineNum = 320;BA.debugLine="Dim ID As ItemsData = Value";
 _id = (b4a.bitdesing.tomapedidos.order_c._itemsdata)(_value);
- //BA.debugLineNum = 318;BA.debugLine="Dim p As B4XView = xui.CreatePanel(\"\")";
+ //BA.debugLineNum = 322;BA.debugLine="Dim p As B4XView = xui.CreatePanel(\"\")";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = parent._xui.CreatePanel(ba,"");
- //BA.debugLineNum = 319;BA.debugLine="p.SetLayoutAnimated(0, 60dip, 0, Root.Width - 60d";
+ //BA.debugLineNum = 323;BA.debugLine="p.SetLayoutAnimated(0, 60dip, 0, Root.Width - 60d";
 _p.SetLayoutAnimated((int) (0),parent.__c.DipToCurrent((int) (60)),(int) (0),(int) (parent._root.getWidth()-parent.__c.DipToCurrent((int) (60))),parent.__c.DipToCurrent((int) (320)));
- //BA.debugLineNum = 320;BA.debugLine="p.LoadLayout(\"products_add_order_item_layout\")";
+ //BA.debugLineNum = 324;BA.debugLine="p.LoadLayout(\"products_add_order_item_layout\")";
 _p.LoadLayout("products_add_order_item_layout",ba);
- //BA.debugLineNum = 321;BA.debugLine="dialog.PutAtTop = True 'put the dialog at the top";
+ //BA.debugLineNum = 325;BA.debugLine="dialog.PutAtTop = True 'put the dialog at the top";
 parent._dialog._putattop /*boolean*/  = parent.__c.True;
- //BA.debugLineNum = 323;BA.debugLine="txtQuantity.Text = ID.CANTIDAD";
+ //BA.debugLineNum = 327;BA.debugLine="txtQuantity.Text = ID.CANTIDAD";
 parent._txtquantity._settext /*String*/ (BA.NumberToString(_id.CANTIDAD /*int*/ ));
- //BA.debugLineNum = 324;BA.debugLine="txtPrecio.Text = ID.PRECIO";
+ //BA.debugLineNum = 328;BA.debugLine="txtPrecio.Text = ID.PRECIO";
 parent._txtprecio._settext /*String*/ (BA.NumberToString(_id.PRECIO /*double*/ ));
- //BA.debugLineNum = 325;BA.debugLine="txtOff.Text = ID.PORDTO";
+ //BA.debugLineNum = 329;BA.debugLine="txtOff.Text = ID.PORDTO";
 parent._txtoff._settext /*String*/ (_id.PORDTO /*String*/ );
- //BA.debugLineNum = 326;BA.debugLine="txtComentario.Text = ID.COMENTARIO";
+ //BA.debugLineNum = 330;BA.debugLine="txtComentario.Text = ID.COMENTARIO";
 parent._txtcomentario._settext /*String*/ (_id.COMENTARIO /*String*/ );
- //BA.debugLineNum = 328;BA.debugLine="Wait For (dialog.ShowCustom(p, \"OK\", \"\", \"CANCEL\"";
+ //BA.debugLineNum = 332;BA.debugLine="Wait For (dialog.ShowCustom(p, \"OK\", \"\", \"CANCEL\"";
 parent.__c.WaitFor("complete", ba, this, parent._dialog._showcustom /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (_p,(Object)("OK"),(Object)(""),(Object)("CANCEL")));
 this.state = 5;
 return;
@@ -556,7 +561,7 @@ case 5:
 this.state = 1;
 _result = (Integer) result[0];
 ;
- //BA.debugLineNum = 329;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
+ //BA.debugLineNum = 333;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
 if (true) break;
 
 case 1:
@@ -569,11 +574,11 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 330;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
+ //BA.debugLineNum = 334;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
 parent._sql.Initialize(parent._starter._route /*String*/ ,parent._starter._database /*String*/ ,parent.__c.True);
- //BA.debugLineNum = 331;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedDMovil SET CANTIDAD";
+ //BA.debugLineNum = 335;BA.debugLine="sql.ExecNonQuery2(\"UPDATE PedDMovil SET CANTIDAD";
 parent._sql.ExecNonQuery2("UPDATE PedDMovil SET CANTIDAD=?, PRECIO=?, IMPORTE=?, PORDTO=?, COMENTARIO=? WHERE ID=?",anywheresoftware.b4a.keywords.Common.ArrayToList(new String[]{parent._txtquantity._gettext /*String*/ (),parent._txtprecio._gettext /*String*/ (),BA.NumberToString((double)(Double.parseDouble(parent._txtquantity._gettext /*String*/ ()))*(double)(Double.parseDouble(parent._txtprecio._gettext /*String*/ ()))-((double)(Double.parseDouble(parent._txtquantity._gettext /*String*/ ()))*(double)(Double.parseDouble(parent._txtprecio._gettext /*String*/ ()))*(double)(Double.parseDouble(parent._txtoff._gettext /*String*/ ()))/(double)100)),parent._txtoff._gettext /*String*/ (),parent._txtcomentario._gettext /*String*/ (),BA.NumberToString(_id.ID /*int*/ )}));
- //BA.debugLineNum = 334;BA.debugLine="B4XPage_Appear";
+ //BA.debugLineNum = 338;BA.debugLine="B4XPage_Appear";
 parent._b4xpage_appear();
  if (true) break;
 
@@ -581,7 +586,7 @@ case 4:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 338;BA.debugLine="End Sub";
+ //BA.debugLineNum = 342;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -615,11 +620,11 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 288;BA.debugLine="Dim ID As ItemsData = Value";
+ //BA.debugLineNum = 292;BA.debugLine="Dim ID As ItemsData = Value";
 _id = (b4a.bitdesing.tomapedidos.order_c._itemsdata)(_value);
- //BA.debugLineNum = 290;BA.debugLine="Msgbox2Async(\"¿Estás seguro de que deseas quitar";
+ //BA.debugLineNum = 294;BA.debugLine="Msgbox2Async(\"¿Estás seguro de que deseas quitar";
 parent.__c.Msgbox2Async(BA.ObjectToCharSequence("¿Estás seguro de que deseas quitar el item?"),BA.ObjectToCharSequence("Confirmación"),"Sí","","No",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(parent.__c.Null)),ba,parent.__c.True);
- //BA.debugLineNum = 291;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
+ //BA.debugLineNum = 295;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
 parent.__c.WaitFor("msgbox_result", ba, this, null);
 this.state = 7;
 return;
@@ -628,7 +633,7 @@ case 7:
 this.state = 1;
 _result = (Integer) result[0];
 ;
- //BA.debugLineNum = 293;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+ //BA.debugLineNum = 297;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
 if (true) break;
 
 case 1:
@@ -643,28 +648,28 @@ this.state = 5;
 case 3:
 //C
 this.state = 6;
- //BA.debugLineNum = 294;BA.debugLine="Log(\"El usuario eligió Sí.\")";
-parent.__c.LogImpl("734406408","El usuario eligió Sí.",0);
- //BA.debugLineNum = 295;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
+ //BA.debugLineNum = 298;BA.debugLine="Log(\"El usuario eligió Sí.\")";
+parent.__c.LogImpl("534144264","El usuario eligió Sí.",0);
+ //BA.debugLineNum = 299;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
 parent._sql.Initialize(parent._starter._route /*String*/ ,parent._starter._database /*String*/ ,parent.__c.True);
- //BA.debugLineNum = 296;BA.debugLine="sql.ExecNonQuery(\"DELETE FROM PedDMovil WHERE ID";
+ //BA.debugLineNum = 300;BA.debugLine="sql.ExecNonQuery(\"DELETE FROM PedDMovil WHERE ID";
 parent._sql.ExecNonQuery("DELETE FROM PedDMovil WHERE ID="+BA.NumberToString(_id.ID /*int*/ ));
  if (true) break;
 
 case 5:
 //C
 this.state = 6;
- //BA.debugLineNum = 298;BA.debugLine="Log(\"El usuario eligió No.\")";
-parent.__c.LogImpl("734406412","El usuario eligió No.",0);
+ //BA.debugLineNum = 302;BA.debugLine="Log(\"El usuario eligió No.\")";
+parent.__c.LogImpl("534144268","El usuario eligió No.",0);
  if (true) break;
 
 case 6:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 302;BA.debugLine="B4XPage_Appear";
+ //BA.debugLineNum = 306;BA.debugLine="B4XPage_Appear";
 parent._b4xpage_appear();
- //BA.debugLineNum = 304;BA.debugLine="End Sub";
+ //BA.debugLineNum = 308;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -678,47 +683,47 @@ int _extra = 0;
 int _i = 0;
 anywheresoftware.b4a.objects.PanelWrapper _p = null;
 b4a.bitdesing.tomapedidos.order_c._itemsdata _id = null;
- //BA.debugLineNum = 160;BA.debugLine="Private Sub clvItems_VisibleRangeChanged (FirstInd";
- //BA.debugLineNum = 162;BA.debugLine="Dim extra As Int = 10";
+ //BA.debugLineNum = 164;BA.debugLine="Private Sub clvItems_VisibleRangeChanged (FirstInd";
+ //BA.debugLineNum = 166;BA.debugLine="Dim extra As Int = 10";
 _extra = (int) (10);
- //BA.debugLineNum = 163;BA.debugLine="For i = Max(0, FirstIndex - extra) To Min(LastInd";
+ //BA.debugLineNum = 167;BA.debugLine="For i = Max(0, FirstIndex - extra) To Min(LastInd";
 {
 final int step2 = 1;
 final int limit2 = (int) (__c.Min(_lastindex+_extra,_clvitems._getsize()-1));
 _i = (int) (__c.Max(0,_firstindex-_extra)) ;
 for (;_i <= limit2 ;_i = _i + step2 ) {
- //BA.debugLineNum = 164;BA.debugLine="Dim p As Panel = clvItems.GetPanel(i)";
+ //BA.debugLineNum = 168;BA.debugLine="Dim p As Panel = clvItems.GetPanel(i)";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
 _p = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(_clvitems._getpanel(_i).getObject()));
- //BA.debugLineNum = 165;BA.debugLine="If i > FirstIndex - extra And i < LastIndex + ex";
+ //BA.debugLineNum = 169;BA.debugLine="If i > FirstIndex - extra And i < LastIndex + ex";
 if (_i>_firstindex-_extra && _i<_lastindex+_extra) { 
- //BA.debugLineNum = 166;BA.debugLine="If p.NumberOfViews = 0 Then";
+ //BA.debugLineNum = 170;BA.debugLine="If p.NumberOfViews = 0 Then";
 if (_p.getNumberOfViews()==0) { 
- //BA.debugLineNum = 167;BA.debugLine="Dim ID As ItemsData = clvItems.GetValue(i)";
+ //BA.debugLineNum = 171;BA.debugLine="Dim ID As ItemsData = clvItems.GetValue(i)";
 _id = (b4a.bitdesing.tomapedidos.order_c._itemsdata)(_clvitems._getvalue(_i));
- //BA.debugLineNum = 168;BA.debugLine="p.LoadLayout(\"order_product_item_layout\")";
+ //BA.debugLineNum = 172;BA.debugLine="p.LoadLayout(\"order_product_item_layout\")";
 _p.LoadLayout("order_product_item_layout",ba);
- //BA.debugLineNum = 169;BA.debugLine="lblQuantity.Text = ID.CANTIDAD";
+ //BA.debugLineNum = 173;BA.debugLine="lblQuantity.Text = ID.CANTIDAD";
 _lblquantity.setText(BA.ObjectToCharSequence(_id.CANTIDAD /*int*/ ));
- //BA.debugLineNum = 170;BA.debugLine="lblProduct.Text = ID.ProductName";
+ //BA.debugLineNum = 174;BA.debugLine="lblProduct.Text = ID.ProductName";
 _lblproduct.setText(BA.ObjectToCharSequence(_id.ProductName /*String*/ ));
- //BA.debugLineNum = 171;BA.debugLine="lblPriceProduct.Text = \"$ \" & ID.PRECIO";
+ //BA.debugLineNum = 175;BA.debugLine="lblPriceProduct.Text = \"$ \" & ID.PRECIO";
 _lblpriceproduct.setText(BA.ObjectToCharSequence("$ "+BA.NumberToString(_id.PRECIO /*double*/ )));
- //BA.debugLineNum = 172;BA.debugLine="lblOffProduct.Text = ID.PORDTO & \" %\"";
+ //BA.debugLineNum = 176;BA.debugLine="lblOffProduct.Text = ID.PORDTO & \" %\"";
 _lbloffproduct.setText(BA.ObjectToCharSequence(_id.PORDTO /*String*/ +" %"));
- //BA.debugLineNum = 173;BA.debugLine="lblPriceItem.Text = \"$ \" & ID.IMPORTE";
+ //BA.debugLineNum = 177;BA.debugLine="lblPriceItem.Text = \"$ \" & ID.IMPORTE";
 _lblpriceitem.setText(BA.ObjectToCharSequence("$ "+BA.NumberToString(_id.IMPORTE /*double*/ )));
  };
  }else {
- //BA.debugLineNum = 176;BA.debugLine="If p.NumberOfViews > 0 Then";
+ //BA.debugLineNum = 180;BA.debugLine="If p.NumberOfViews > 0 Then";
 if (_p.getNumberOfViews()>0) { 
- //BA.debugLineNum = 177;BA.debugLine="p.RemoveAllViews";
+ //BA.debugLineNum = 181;BA.debugLine="p.RemoveAllViews";
 _p.RemoveAllViews();
  };
  };
  }
 };
- //BA.debugLineNum = 181;BA.debugLine="End Sub";
+ //BA.debugLineNum = 185;BA.debugLine="End Sub";
 return "";
 }
 public Object  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
@@ -734,119 +739,119 @@ byte[] _buffer = null;
 anywheresoftware.b4a.objects.streams.File.InputStreamWrapper _inputstream1 = null;
 b4a.bitdesing.tomapedidos.order_c._itemsdata _id = null;
 anywheresoftware.b4a.objects.PanelWrapper _p = null;
- //BA.debugLineNum = 84;BA.debugLine="Private Sub txtSearch_TextChanged (Old As String,";
- //BA.debugLineNum = 86;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase, T";
+ //BA.debugLineNum = 88;BA.debugLine="Private Sub txtSearch_TextChanged (Old As String,";
+ //BA.debugLineNum = 90;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase, T";
 _sql.Initialize(_starter._route /*String*/ ,_starter._database /*String*/ ,__c.True);
- //BA.debugLineNum = 87;BA.debugLine="rs = sql.ExecQuery(\"SELECT * FROM PedCMovil WHERE";
+ //BA.debugLineNum = 91;BA.debugLine="rs = sql.ExecQuery(\"SELECT * FROM PedCMovil WHERE";
 _rs = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(_sql.ExecQuery("SELECT * FROM PedCMovil WHERE (ID = "+BA.NumberToString(_od.ID /*int*/ )+")")));
- //BA.debugLineNum = 88;BA.debugLine="If rs.RowCount > 0 Then";
+ //BA.debugLineNum = 92;BA.debugLine="If rs.RowCount > 0 Then";
 if (_rs.getRowCount()>0) { 
- //BA.debugLineNum = 89;BA.debugLine="Do While rs.NextRow";
+ //BA.debugLineNum = 93;BA.debugLine="Do While rs.NextRow";
 while (_rs.NextRow()) {
- //BA.debugLineNum = 91;BA.debugLine="Dim OD As OrdersData";
+ //BA.debugLineNum = 95;BA.debugLine="Dim OD As OrdersData";
 _od = new b4a.bitdesing.tomapedidos.orders_c._ordersdata();
- //BA.debugLineNum = 92;BA.debugLine="OD.Initialize";
+ //BA.debugLineNum = 96;BA.debugLine="OD.Initialize";
 _od.Initialize();
- //BA.debugLineNum = 93;BA.debugLine="OD.ID = rs.GetString(\"ID\")";
+ //BA.debugLineNum = 97;BA.debugLine="OD.ID = rs.GetString(\"ID\")";
 _od.ID /*int*/  = (int)(Double.parseDouble(_rs.GetString("ID")));
- //BA.debugLineNum = 94;BA.debugLine="OD.CODCLIENTE = rs.GetString(\"CODCLIENTE\")";
+ //BA.debugLineNum = 98;BA.debugLine="OD.CODCLIENTE = rs.GetString(\"CODCLIENTE\")";
 _od.CODCLIENTE /*int*/  = (int)(Double.parseDouble(_rs.GetString("CODCLIENTE")));
- //BA.debugLineNum = 95;BA.debugLine="OD.Customer = Starter.SelectCustomer(OD.CODCLIE";
+ //BA.debugLineNum = 99;BA.debugLine="OD.Customer = Starter.SelectCustomer(OD.CODCLIE";
 _od.Customer /*String*/  = _starter._selectcustomer /*b4a.bitdesing.tomapedidos.customers_c._customersdata*/ (_od.CODCLIENTE /*int*/ ).NOMBRE /*String*/ ;
- //BA.debugLineNum = 96;BA.debugLine="OD.CODVENDEDOR = rs.GetString(\"CODVENDEDOR\")";
+ //BA.debugLineNum = 100;BA.debugLine="OD.CODVENDEDOR = rs.GetString(\"CODVENDEDOR\")";
 _od.CODVENDEDOR /*int*/  = (int)(Double.parseDouble(_rs.GetString("CODVENDEDOR")));
- //BA.debugLineNum = 97;BA.debugLine="OD.FECHA = rs.GetString(\"FECHA\")";
+ //BA.debugLineNum = 101;BA.debugLine="OD.FECHA = rs.GetString(\"FECHA\")";
 _od.FECHA /*String*/  = _rs.GetString("FECHA");
- //BA.debugLineNum = 98;BA.debugLine="OD.COMENTARIOS = rs.GetString(\"COMENTARIOS\")";
+ //BA.debugLineNum = 102;BA.debugLine="OD.COMENTARIOS = rs.GetString(\"COMENTARIOS\")";
 _od.COMENTARIOS /*String*/  = _rs.GetString("COMENTARIOS");
- //BA.debugLineNum = 100;BA.debugLine="Dim Buffer() As Byte";
+ //BA.debugLineNum = 104;BA.debugLine="Dim Buffer() As Byte";
 _buffer = new byte[(int) (0)];
 ;
- //BA.debugLineNum = 101;BA.debugLine="Buffer = rs.GetBlob(\"FIRMA\")";
+ //BA.debugLineNum = 105;BA.debugLine="Buffer = rs.GetBlob(\"FIRMA\")";
 _buffer = _rs.GetBlob("FIRMA");
- //BA.debugLineNum = 102;BA.debugLine="If Buffer = Null Then";
+ //BA.debugLineNum = 106;BA.debugLine="If Buffer = Null Then";
 if (_buffer== null) { 
- //BA.debugLineNum = 103;BA.debugLine="OD.FIRMA = Null";
+ //BA.debugLineNum = 107;BA.debugLine="OD.FIRMA = Null";
 _od.FIRMA /*anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper*/  = (anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(__c.Null));
  }else {
- //BA.debugLineNum = 105;BA.debugLine="Dim InputStream1 As InputStream";
+ //BA.debugLineNum = 109;BA.debugLine="Dim InputStream1 As InputStream";
 _inputstream1 = new anywheresoftware.b4a.objects.streams.File.InputStreamWrapper();
- //BA.debugLineNum = 106;BA.debugLine="InputStream1.InitializeFromBytesArray(Buffer,";
+ //BA.debugLineNum = 110;BA.debugLine="InputStream1.InitializeFromBytesArray(Buffer,";
 _inputstream1.InitializeFromBytesArray(_buffer,(int) (0),_buffer.length);
- //BA.debugLineNum = 107;BA.debugLine="OD.FIRMA.Initialize2(InputStream1)";
+ //BA.debugLineNum = 111;BA.debugLine="OD.FIRMA.Initialize2(InputStream1)";
 _od.FIRMA /*anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper*/ .Initialize2((java.io.InputStream)(_inputstream1.getObject()));
- //BA.debugLineNum = 108;BA.debugLine="InputStream1.Close";
+ //BA.debugLineNum = 112;BA.debugLine="InputStream1.Close";
 _inputstream1.Close();
  };
- //BA.debugLineNum = 111;BA.debugLine="OD.NROPEDIDO = rs.GetString(\"NROPEDIDO\")";
+ //BA.debugLineNum = 115;BA.debugLine="OD.NROPEDIDO = rs.GetString(\"NROPEDIDO\")";
 _od.NROPEDIDO /*String*/  = _rs.GetString("NROPEDIDO");
- //BA.debugLineNum = 112;BA.debugLine="OD.QUIENRECIBIO = rs.GetString(\"QUIENRECIBIO\")";
+ //BA.debugLineNum = 116;BA.debugLine="OD.QUIENRECIBIO = rs.GetString(\"QUIENRECIBIO\")";
 _od.QUIENRECIBIO /*String*/  = _rs.GetString("QUIENRECIBIO");
- //BA.debugLineNum = 113;BA.debugLine="OD.TotalOrder = sql.ExecQuerySingleResult(\"SELE";
+ //BA.debugLineNum = 117;BA.debugLine="OD.TotalOrder = sql.ExecQuerySingleResult(\"SELE";
 _od.TotalOrder /*String*/  = _sql.ExecQuerySingleResult("SELECT sum(IMPORTE) FROM PedDMovil WHERE IDPEDIDO="+BA.NumberToString(_od.ID /*int*/ ));
  }
 ;
  };
- //BA.debugLineNum = 117;BA.debugLine="rs.Close";
+ //BA.debugLineNum = 121;BA.debugLine="rs.Close";
 _rs.Close();
- //BA.debugLineNum = 119;BA.debugLine="ftxtOrderId.Text = OD.ID";
+ //BA.debugLineNum = 123;BA.debugLine="ftxtOrderId.Text = OD.ID";
 _ftxtorderid._settext /*String*/ (BA.NumberToString(_od.ID /*int*/ ));
- //BA.debugLineNum = 120;BA.debugLine="ftxtOrderId.TextField.Enabled = False";
+ //BA.debugLineNum = 124;BA.debugLine="ftxtOrderId.TextField.Enabled = False";
 _ftxtorderid._gettextfield /*anywheresoftware.b4a.objects.B4XViewWrapper*/ ().setEnabled(__c.False);
- //BA.debugLineNum = 121;BA.debugLine="ftxtCustomerName.Text = OD.Customer";
+ //BA.debugLineNum = 125;BA.debugLine="ftxtCustomerName.Text = OD.Customer";
 _ftxtcustomername._settext /*String*/ (_od.Customer /*String*/ );
- //BA.debugLineNum = 122;BA.debugLine="ftxtCustomerName.TextField.Enabled = False";
+ //BA.debugLineNum = 126;BA.debugLine="ftxtCustomerName.TextField.Enabled = False";
 _ftxtcustomername._gettextfield /*anywheresoftware.b4a.objects.B4XViewWrapper*/ ().setEnabled(__c.False);
- //BA.debugLineNum = 123;BA.debugLine="ftxtComent = OD.COMENTARIOS";
+ //BA.debugLineNum = 127;BA.debugLine="ftxtComent = OD.COMENTARIOS";
 _ftxtcoment = _od.COMENTARIOS /*String*/ ;
- //BA.debugLineNum = 124;BA.debugLine="QuienRecibe = OD.QUIENRECIBIO";
+ //BA.debugLineNum = 128;BA.debugLine="QuienRecibe = OD.QUIENRECIBIO";
 _quienrecibe = _od.QUIENRECIBIO /*String*/ ;
- //BA.debugLineNum = 125;BA.debugLine="Firma = OD.FIRMA";
+ //BA.debugLineNum = 129;BA.debugLine="Firma = OD.FIRMA";
 _firma = _od.FIRMA /*anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper*/ ;
- //BA.debugLineNum = 128;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase, T";
+ //BA.debugLineNum = 132;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase, T";
 _sql.Initialize(_starter._route /*String*/ ,_starter._database /*String*/ ,__c.True);
- //BA.debugLineNum = 130;BA.debugLine="rs = sql.ExecQuery(\"SELECT * FROM PedDMovil WHERE";
+ //BA.debugLineNum = 134;BA.debugLine="rs = sql.ExecQuery(\"SELECT * FROM PedDMovil WHERE";
 _rs = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(_sql.ExecQuery("SELECT * FROM PedDMovil WHERE (IDPEDIDO = "+BA.NumberToString(_od.ID /*int*/ )+")")));
- //BA.debugLineNum = 132;BA.debugLine="clvItems.Clear";
+ //BA.debugLineNum = 136;BA.debugLine="clvItems.Clear";
 _clvitems._clear();
- //BA.debugLineNum = 134;BA.debugLine="Dim xui As XUI";
+ //BA.debugLineNum = 138;BA.debugLine="Dim xui As XUI";
 _xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
- //BA.debugLineNum = 135;BA.debugLine="If rs.RowCount > 0 Then";
+ //BA.debugLineNum = 139;BA.debugLine="If rs.RowCount > 0 Then";
 if (_rs.getRowCount()>0) { 
- //BA.debugLineNum = 136;BA.debugLine="Do While rs.NextRow";
+ //BA.debugLineNum = 140;BA.debugLine="Do While rs.NextRow";
 while (_rs.NextRow()) {
- //BA.debugLineNum = 138;BA.debugLine="Dim ID As ItemsData";
+ //BA.debugLineNum = 142;BA.debugLine="Dim ID As ItemsData";
 _id = new b4a.bitdesing.tomapedidos.order_c._itemsdata();
- //BA.debugLineNum = 139;BA.debugLine="ID.Initialize";
+ //BA.debugLineNum = 143;BA.debugLine="ID.Initialize";
 _id.Initialize();
- //BA.debugLineNum = 140;BA.debugLine="ID.ID = rs.GetString(\"ID\")";
+ //BA.debugLineNum = 144;BA.debugLine="ID.ID = rs.GetString(\"ID\")";
 _id.ID /*int*/  = (int)(Double.parseDouble(_rs.GetString("ID")));
- //BA.debugLineNum = 141;BA.debugLine="ID.CODARTICULO = rs.GetString(\"CODARTICULO\")";
+ //BA.debugLineNum = 145;BA.debugLine="ID.CODARTICULO = rs.GetString(\"CODARTICULO\")";
 _id.CODARTICULO /*int*/  = (int)(Double.parseDouble(_rs.GetString("CODARTICULO")));
- //BA.debugLineNum = 142;BA.debugLine="ID.ProductName = Starter.SelectProduct(ID.CODAR";
+ //BA.debugLineNum = 146;BA.debugLine="ID.ProductName = Starter.SelectProduct(ID.CODAR";
 _id.ProductName /*String*/  = _starter._selectproduct /*b4a.bitdesing.tomapedidos.products_c._productsdata*/ (_id.CODARTICULO /*int*/ ).DESCRIPCION /*String*/ ;
- //BA.debugLineNum = 143;BA.debugLine="ID.CANTIDAD = rs.GetString(\"CANTIDAD\")";
+ //BA.debugLineNum = 147;BA.debugLine="ID.CANTIDAD = rs.GetString(\"CANTIDAD\")";
 _id.CANTIDAD /*int*/  = (int)(Double.parseDouble(_rs.GetString("CANTIDAD")));
- //BA.debugLineNum = 144;BA.debugLine="ID.PRECIO = rs.GetString(\"PRECIO\")";
+ //BA.debugLineNum = 148;BA.debugLine="ID.PRECIO = rs.GetString(\"PRECIO\")";
 _id.PRECIO /*double*/  = (double)(Double.parseDouble(_rs.GetString("PRECIO")));
- //BA.debugLineNum = 145;BA.debugLine="ID.IMPORTE = rs.GetString(\"IMPORTE\")";
+ //BA.debugLineNum = 149;BA.debugLine="ID.IMPORTE = rs.GetString(\"IMPORTE\")";
 _id.IMPORTE /*double*/  = (double)(Double.parseDouble(_rs.GetString("IMPORTE")));
- //BA.debugLineNum = 146;BA.debugLine="ID.PORDTO = rs.GetString(\"PORDTO\")";
+ //BA.debugLineNum = 150;BA.debugLine="ID.PORDTO = rs.GetString(\"PORDTO\")";
 _id.PORDTO /*String*/  = _rs.GetString("PORDTO");
- //BA.debugLineNum = 148;BA.debugLine="Dim p As Panel";
+ //BA.debugLineNum = 152;BA.debugLine="Dim p As Panel";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 149;BA.debugLine="p = xui.CreatePanel(\"\")";
+ //BA.debugLineNum = 153;BA.debugLine="p = xui.CreatePanel(\"\")";
 _p = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(_xui.CreatePanel(ba,"").getObject()));
- //BA.debugLineNum = 150;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, clvItems.AsView.Wi";
+ //BA.debugLineNum = 154;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, clvItems.AsView.Wi";
 _p.SetLayoutAnimated((int) (0),(int) (0),(int) (0),_clvitems._asview().getWidth(),__c.DipToCurrent((int) (52)));
- //BA.debugLineNum = 151;BA.debugLine="clvItems.Add(p, ID)";
+ //BA.debugLineNum = 155;BA.debugLine="clvItems.Add(p, ID)";
 _clvitems._add((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_p.getObject())),(Object)(_id));
  }
 ;
  };
- //BA.debugLineNum = 156;BA.debugLine="rs.Close";
+ //BA.debugLineNum = 160;BA.debugLine="rs.Close";
 _rs.Close();
- //BA.debugLineNum = 158;BA.debugLine="End Sub";
+ //BA.debugLineNum = 162;BA.debugLine="End Sub";
 return "";
 }
 public Object callSub(String sub, Object sender, Object[] args) throws Exception {

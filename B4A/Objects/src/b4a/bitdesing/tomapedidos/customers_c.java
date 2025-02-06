@@ -80,7 +80,7 @@ _root = _root1;
  //BA.debugLineNum = 28;BA.debugLine="Root.LoadLayout(\"customers_layout\")";
 _root.LoadLayout("customers_layout",ba);
  //BA.debugLineNum = 29;BA.debugLine="Log(\"create customers page\")";
-__c.LogImpl("734734083","create customers page",0);
+__c.LogImpl("534471939","create customers page",0);
  //BA.debugLineNum = 31;BA.debugLine="B4XPages.SetTitle(Me, \"Clientes\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Clientes"));
  //BA.debugLineNum = 33;BA.debugLine="End Sub";

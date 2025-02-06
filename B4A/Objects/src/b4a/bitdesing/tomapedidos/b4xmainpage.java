@@ -46,12 +46,12 @@ public String  _b4xpage_appear() throws Exception{
  //BA.debugLineNum = 61;BA.debugLine="If Starter.ExistDataBase Then";
 if (_starter._existdatabase /*boolean*/ ()) { 
  //BA.debugLineNum = 62;BA.debugLine="Log(\"existe base\")";
-__c.LogImpl("7524290","existe base",0);
+__c.LogImpl("5524290","existe base",0);
  //BA.debugLineNum = 63;BA.debugLine="btnLogin.Text = \"Iniciar sesión\"";
 _btnlogin.setText(BA.ObjectToCharSequence("Iniciar sesión"));
  }else {
  //BA.debugLineNum = 65;BA.debugLine="Log(\"No existe base\")";
-__c.LogImpl("7524293","No existe base",0);
+__c.LogImpl("5524293","No existe base",0);
  //BA.debugLineNum = 66;BA.debugLine="btnLogin.Text = \"Configuración\"";
 _btnlogin.setText(BA.ObjectToCharSequence("Configuración"));
  };
@@ -113,12 +113,12 @@ public String  _btnlogin_click() throws Exception{
  //BA.debugLineNum = 76;BA.debugLine="If Starter.ExistDataBase Then";
 if (_starter._existdatabase /*boolean*/ ()) { 
  //BA.debugLineNum = 77;BA.debugLine="Log(\"existe base\")";
-__c.LogImpl("7655362","existe base",0);
+__c.LogImpl("5655362","existe base",0);
  //BA.debugLineNum = 78;BA.debugLine="B4XPages.ShowPage(\"login_page\")";
 _b4xpages._showpage /*String*/ (ba,"login_page");
  }else {
  //BA.debugLineNum = 80;BA.debugLine="Log(\"No existe base\")";
-__c.LogImpl("7655365","No existe base",0);
+__c.LogImpl("5655365","No existe base",0);
  //BA.debugLineNum = 81;BA.debugLine="B4XPages.ShowPage(\"settings_page\")";
 _b4xpages._showpage /*String*/ (ba,"settings_page");
  };
@@ -164,7 +164,7 @@ public String  _copydatabase() throws Exception{
  //BA.debugLineNum = 71;BA.debugLine="File.Copy(File.DirAssets, Starter.DataBase, Start";
 __c.File.Copy(__c.File.getDirAssets(),_starter._database /*String*/ ,_starter._route /*String*/ ,_starter._database /*String*/ );
  //BA.debugLineNum = 72;BA.debugLine="Log(\"copy database\")";
-__c.LogImpl("7589826","copy database",0);
+__c.LogImpl("5589826","copy database",0);
  //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return "";
 }

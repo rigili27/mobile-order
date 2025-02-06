@@ -59,7 +59,7 @@ public String  _ast_newtext(String _text) throws Exception{
 int _i = 0;
  //BA.debugLineNum = 43;BA.debugLine="Private Sub AST_NewText(text As String)";
  //BA.debugLineNum = 44;BA.debugLine="Log(\"client: \" & text)";
-__c.LogImpl("741418753","client: "+_text,0);
+__c.LogImpl("541418753","client: "+_text,0);
  //BA.debugLineNum = 45;BA.debugLine="Dim i As Int = text.IndexOf(\" \")";
 _i = _text.indexOf(" ");
  //BA.debugLineNum = 46;BA.debugLine="If i = -1 Then";
@@ -76,7 +76,7 @@ return "";
 public String  _ast_terminated() throws Exception{
  //BA.debugLineNum = 248;BA.debugLine="Private Sub AST_Terminated";
  //BA.debugLineNum = 249;BA.debugLine="Log(\"terminated\")";
-__c.LogImpl("742139649","terminated",0);
+__c.LogImpl("542139649","terminated",0);
  //BA.debugLineNum = 250;BA.debugLine="CloseConnection";
 _closeconnection();
  //BA.debugLineNum = 251;BA.debugLine="End Sub";
@@ -92,7 +92,7 @@ if ((_dir).equals("") == false && __c.File.Exists(_mserver._basedir /*String*/ ,
  //BA.debugLineNum = 144;BA.debugLine="currentPath = Dir";
 _currentpath = _dir;
  //BA.debugLineNum = 145;BA.debugLine="Log(\"CurrentPath: \" & currentPath)";
-__c.LogImpl("741615364","CurrentPath: "+_currentpath,0);
+__c.LogImpl("541615364","CurrentPath: "+_currentpath,0);
  //BA.debugLineNum = 146;BA.debugLine="SendResponse(200, \"\")";
 _sendresponse((int) (200),"");
  }else if((_dir).equals("") == false) { 
@@ -191,7 +191,7 @@ public String  _error(int _code,String _msg) throws Exception{
  //BA.debugLineNum = 228;BA.debugLine="SendResponse(code, msg)";
 _sendresponse(_code,_msg);
  //BA.debugLineNum = 229;BA.debugLine="Log(\"Error: \" & msg)";
-__c.LogImpl("741943042","Error: "+_msg,0);
+__c.LogImpl("541943042","Error: "+_msg,0);
  //BA.debugLineNum = 230;BA.debugLine="AST.CloseGracefully";
 _ast._closegracefully /*String*/ ();
  //BA.debugLineNum = 231;BA.debugLine="End Sub";
@@ -343,7 +343,7 @@ _sendresponse((int) (500),"Unknown command: "+_command);
  } 
        catch (Exception e69) {
 			ba.setLastException(e69); //BA.debugLineNum = 125;BA.debugLine="Log(LastException)";
-__c.LogImpl("741484359",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("541484359",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  //BA.debugLineNum = 126;BA.debugLine="SendResponse(500, \"Error: \" & LastException.Mess";
 _sendresponse((int) (500),"Error: "+__c.LastException(getActivityBA()).getMessage());
  };
@@ -366,7 +366,7 @@ _loggedin = __c.True;
  //BA.debugLineNum = 175;BA.debugLine="SendResponse(230, \"\")";
 _sendresponse((int) (230),"");
  //BA.debugLineNum = 176;BA.debugLine="Log(\"User logged in: \" & user.Name)";
-__c.LogImpl("741811975","User logged in: "+_user.Name /*String*/ ,0);
+__c.LogImpl("541811975","User logged in: "+_user.Name /*String*/ ,0);
  //BA.debugLineNum = 177;BA.debugLine="Return";
 if (true) return "";
  };
@@ -493,7 +493,7 @@ public String  _timeout_tick() throws Exception{
  //BA.debugLineNum = 33;BA.debugLine="If DateTime.Now - lastCommand > TIMEOUT_MINUTES *";
 if (__c.DateTime.getNow()-_lastcommand>_timeout_minutes*__c.DateTime.TicksPerMinute) { 
  //BA.debugLineNum = 34;BA.debugLine="Log(\"Timeout!!!\")";
-__c.LogImpl("741287682","Timeout!!!",0);
+__c.LogImpl("541287682","Timeout!!!",0);
  //BA.debugLineNum = 35;BA.debugLine="CloseConnection";
 _closeconnection();
  };

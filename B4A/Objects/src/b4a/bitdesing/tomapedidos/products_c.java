@@ -243,7 +243,7 @@ _root = _root1;
  //BA.debugLineNum = 45;BA.debugLine="Root.LoadLayout(\"products_layout\")";
 _root.LoadLayout("products_layout",ba);
  //BA.debugLineNum = 46;BA.debugLine="Log(\"create products page\")";
-__c.LogImpl("732636931","create products page",0);
+__c.LogImpl("532374787","create products page",0);
  //BA.debugLineNum = 49;BA.debugLine="B4XPages.SetTitle(Me, \"Productos\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Productos"));
  //BA.debugLineNum = 50;BA.debugLine="B4XPages.AddMenuItem(Me, \"Escanear\")";

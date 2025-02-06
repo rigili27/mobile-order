@@ -50,7 +50,7 @@ _root = _root1;
  //BA.debugLineNum = 22;BA.debugLine="Root.LoadLayout(\"settings_layout\")";
 _root.LoadLayout("settings_layout",ba);
  //BA.debugLineNum = 23;BA.debugLine="Log(\"create settings page\")";
-__c.LogImpl("735192835","create settings page",0);
+__c.LogImpl("534930691","create settings page",0);
  //BA.debugLineNum = 25;BA.debugLine="ime.Initialize(\"\")";
 _ime.Initialize("");
  //BA.debugLineNum = 26;BA.debugLine="ime.SetCustomFilter(txtIP, txtIP.INPUT_TYPE_NUMBE";
@@ -68,7 +68,7 @@ __c.ToastMessageShow(BA.ObjectToCharSequence("La ip ingresada no es válida, ver
 if (true) return "";
  };
  //BA.debugLineNum = 43;BA.debugLine="Log(\"Envia DB\")";
-__c.LogImpl("735323911","Envia DB",0);
+__c.LogImpl("535061767","Envia DB",0);
  //BA.debugLineNum = 44;BA.debugLine="If iniciarFTP Then";
 if (_iniciarftp()) { 
  //BA.debugLineNum = 45;BA.debugLine="ProgressDialogShow2(\"Enviando datos...\",False)";
@@ -125,7 +125,7 @@ case 4:
 this.state = 5;
 ;
  //BA.debugLineNum = 58;BA.debugLine="Log(\"Recibe DB\")";
-parent.__c.LogImpl("735389447","Recibe DB",0);
+parent.__c.LogImpl("535127303","Recibe DB",0);
  //BA.debugLineNum = 59;BA.debugLine="Msgbox2Async(\"Desea descargar los datos?\" & CRLF";
 parent.__c.Msgbox2Async(BA.ObjectToCharSequence("Desea descargar los datos?"+parent.__c.CRLF+"Atención, si no envió los pedidos anteriormente los datos se perderán."),BA.ObjectToCharSequence("Atención"),"Aceptar","Cancelar","",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(parent.__c.Null)),ba,parent.__c.False);
  //BA.debugLineNum = 60;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
@@ -244,11 +244,11 @@ return "";
 public String  _ftp_downloadcompleted(String _serverpath,boolean _success) throws Exception{
  //BA.debugLineNum = 103;BA.debugLine="Sub FTP_DownloadCompleted (ServerPath As String, S";
  //BA.debugLineNum = 104;BA.debugLine="Log(ServerPath & \", Success=\" & Success)";
-__c.LogImpl("735651585",_serverpath+", Success="+BA.ObjectToString(_success),0);
+__c.LogImpl("535389441",_serverpath+", Success="+BA.ObjectToString(_success),0);
  //BA.debugLineNum = 105;BA.debugLine="If Success = False Then";
 if (_success==__c.False) { 
  //BA.debugLineNum = 106;BA.debugLine="Log(LastException.Message)";
-__c.LogImpl("735651587",__c.LastException(ba).getMessage(),0);
+__c.LogImpl("535389443",__c.LastException(ba).getMessage(),0);
  //BA.debugLineNum = 107;BA.debugLine="MsgboxAsync(LastException.Message,\"Error FTP\")";
 __c.MsgboxAsync(BA.ObjectToCharSequence(__c.LastException(ba).getMessage()),BA.ObjectToCharSequence("Error FTP"),ba);
  }else {
@@ -263,11 +263,11 @@ return "";
 public String  _ftp_uploadcompleted(String _serverpath,boolean _success) throws Exception{
  //BA.debugLineNum = 92;BA.debugLine="Sub ftp_UploadCompleted (ServerPath As String, Suc";
  //BA.debugLineNum = 93;BA.debugLine="Log(ServerPath & \", Success=\" & Success)";
-__c.LogImpl("735586049",_serverpath+", Success="+BA.ObjectToString(_success),0);
+__c.LogImpl("535323905",_serverpath+", Success="+BA.ObjectToString(_success),0);
  //BA.debugLineNum = 94;BA.debugLine="If Success = False Then";
 if (_success==__c.False) { 
  //BA.debugLineNum = 95;BA.debugLine="Log(LastException.Message)";
-__c.LogImpl("735586051",__c.LastException(ba).getMessage(),0);
+__c.LogImpl("535323907",__c.LastException(ba).getMessage(),0);
  //BA.debugLineNum = 96;BA.debugLine="MsgboxAsync(LastException.Message,\"Error FTP\")";
 __c.MsgboxAsync(BA.ObjectToCharSequence(__c.LastException(ba).getMessage()),BA.ObjectToCharSequence("Error FTP"),ba);
  }else {

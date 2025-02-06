@@ -83,7 +83,7 @@ _root = _root1;
  //BA.debugLineNum = 28;BA.debugLine="Root.LoadLayout(\"orders_layout\")";
 _root.LoadLayout("orders_layout",ba);
  //BA.debugLineNum = 29;BA.debugLine="Log(\"create orders page\")";
-__c.LogImpl("733423363","create orders page",0);
+__c.LogImpl("533161219","create orders page",0);
  //BA.debugLineNum = 31;BA.debugLine="B4XPages.SetTitle(Me, \"Pedidos\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Pedidos"));
  //BA.debugLineNum = 32;BA.debugLine="Dim addOrder As B4AMenuItem = B4XPages.AddMenuIte";
@@ -199,7 +199,7 @@ case 3:
 //C
 this.state = 6;
  //BA.debugLineNum = 144;BA.debugLine="Log(\"El usuario eligió Sí.\")";
-parent.__c.LogImpl("733816584","El usuario eligió Sí.",0);
+parent.__c.LogImpl("533554440","El usuario eligió Sí.",0);
  //BA.debugLineNum = 145;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
 parent._sql.Initialize(parent._starter._route /*String*/ ,parent._starter._database /*String*/ ,parent.__c.True);
  //BA.debugLineNum = 147;BA.debugLine="sql.ExecNonQuery(\"DELETE FROM PedCMovil WHERE ID";
@@ -212,7 +212,7 @@ case 5:
 //C
 this.state = 6;
  //BA.debugLineNum = 152;BA.debugLine="Log(\"El usuario eligió No.\")";
-parent.__c.LogImpl("733816592","El usuario eligió No.",0);
+parent.__c.LogImpl("533554448","El usuario eligió No.",0);
  if (true) break;
 
 case 6:

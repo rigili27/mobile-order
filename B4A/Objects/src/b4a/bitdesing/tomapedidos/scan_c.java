@@ -60,7 +60,7 @@ _root = _root1;
  //BA.debugLineNum = 35;BA.debugLine="Root.LoadLayout(\"scan_layout\")";
 _root.LoadLayout("scan_layout",ba);
  //BA.debugLineNum = 36;BA.debugLine="Log(\"create scan page\")";
-__c.LogImpl("735979267","create scan page",0);
+__c.LogImpl("535717123","create scan page",0);
  //BA.debugLineNum = 38;BA.debugLine="CreateDetector (Array(\"AZTEC\", \"CODE_128\", \"CODE_";
 _createdetector(anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)("AZTEC"),(Object)("CODE_128"),(Object)("CODE_39"),(Object)("CODE_93"),(Object)("CODABAR"),(Object)("DATA_MATRIX"),(Object)("EAN_13"),(Object)("EAN_8"),(Object)("ITF"),(Object)("PDF417"),(Object)("QR_CODE"),(Object)("UPC_A"),(Object)("UPC_E")}));
  //BA.debugLineNum = 40;BA.debugLine="End Sub";
@@ -202,7 +202,7 @@ _operational = BA.ObjectToBoolean(_detector.RunMethod("isOperational",(Object[])
  //BA.debugLineNum = 57;BA.debugLine="If operational = False Then";
 if (_operational==__c.False) { 
  //BA.debugLineNum = 58;BA.debugLine="Log(\"Failed to create detector\")";
-__c.LogImpl("736044816","Failed to create detector",0);
+__c.LogImpl("535782672","Failed to create detector",0);
  };
  //BA.debugLineNum = 60;BA.debugLine="btnStop.Enabled = operational";
 _btnstop.setEnabled(_operational);
@@ -290,7 +290,7 @@ case 3:
 //C
 this.state = 4;
  //BA.debugLineNum = 91;BA.debugLine="Log(\"No permission!\")";
-parent.__c.LogImpl("736241412","No permission!",0);
+parent.__c.LogImpl("535979268","No permission!",0);
  //BA.debugLineNum = 92;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
@@ -339,7 +339,7 @@ case 9:
 //C
 this.state = 10;
  //BA.debugLineNum = 102;BA.debugLine="Log(\"Error opening camera\")";
-parent.__c.LogImpl("736241423","Error opening camera",0);
+parent.__c.LogImpl("535979279","Error opening camera",0);
  //BA.debugLineNum = 103;BA.debugLine="StopCamera";
 parent._stopcamera();
  if (true) break;

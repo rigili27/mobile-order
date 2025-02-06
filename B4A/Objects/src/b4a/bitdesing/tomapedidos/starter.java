@@ -411,7 +411,7 @@ final int groupLen7 = group7.getSize()
 for (; index7 < groupLen7;index7++){
 _bdfile = BA.ObjectToString(group7.Get(index7));
  //BA.debugLineNum = 152;BA.debugLine="Log(bdfile)";
-anywheresoftware.b4a.keywords.Common.LogImpl("71572875",_bdfile,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("51572875",_bdfile,0);
  //BA.debugLineNum = 153;BA.debugLine="Dim u As Uri = GetFileUri(bdfile)";
 _u = new anywheresoftware.b4a.objects.ContentResolverWrapper.UriWrapper();
 _u = (anywheresoftware.b4a.objects.ContentResolverWrapper.UriWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ContentResolverWrapper.UriWrapper(), (android.net.Uri)(_getfileuri(_bdfile)));

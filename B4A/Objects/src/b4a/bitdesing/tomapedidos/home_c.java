@@ -45,7 +45,7 @@ _root = _root1;
  //BA.debugLineNum = 14;BA.debugLine="Root.LoadLayout(\"home_layout\")";
 _root.LoadLayout("home_layout",ba);
  //BA.debugLineNum = 15;BA.debugLine="Log(\"create home page\")";
-__c.LogImpl("736765699","create home page",0);
+__c.LogImpl("536503555","create home page",0);
  //BA.debugLineNum = 18;BA.debugLine="B4XPages.SetTitle(Me, \"Home\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Home"));
  //BA.debugLineNum = 19;BA.debugLine="B4XPages.AddMenuItem(Me, \"Cerrar sesión\")";

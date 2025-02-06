@@ -70,7 +70,7 @@ _mclient._sendresponse /*String*/ ((int) (451),"");
  //BA.debugLineNum = 43;BA.debugLine="Close";
 _close();
  //BA.debugLineNum = 44;BA.debugLine="Log(LastException)";
-__c.LogImpl("742467343",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("542467343",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  };
  };
  //BA.debugLineNum = 47;BA.debugLine="End Sub";
@@ -91,7 +91,7 @@ _fileout.WriteBytes(_buffer,(int) (0),_buffer.length);
  } 
        catch (Exception e4) {
 			ba.setLastException(e4); //BA.debugLineNum = 116;BA.debugLine="Log(LastException)";
-__c.LogImpl("742795012",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("542795012",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  //BA.debugLineNum = 117;BA.debugLine="Close";
 _close();
  };
@@ -101,7 +101,7 @@ return "";
 public String  _astream_terminated() throws Exception{
  //BA.debugLineNum = 129;BA.debugLine="Private Sub AStream_Terminated";
  //BA.debugLineNum = 130;BA.debugLine="Log(\"Data connection terminated: \" & mTask.Path)";
-__c.LogImpl("742926081","Data connection terminated: "+_mtask.Path /*String*/ ,0);
+__c.LogImpl("542926081","Data connection terminated: "+_mtask.Path /*String*/ ,0);
  //BA.debugLineNum = 131;BA.debugLine="CallSubDelayed3(mClient, \"SendResponse\", 226, \"\")";
 __c.CallSubDelayed3(ba,(Object)(_mclient),"SendResponse",(Object)(226),(Object)(""));
  //BA.debugLineNum = 132;BA.debugLine="Close";
@@ -272,7 +272,7 @@ _astream.Write2(_filebuffer,(int) (0),_c);
  } 
        catch (Exception e11) {
 			ba.setLastException(e11); //BA.debugLineNum = 69;BA.debugLine="Log(LastException)";
-__c.LogImpl("742598412",BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("542598412",BA.ObjectToString(__c.LastException(getActivityBA())),0);
  //BA.debugLineNum = 70;BA.debugLine="Close";
 _close();
  };

@@ -38,7 +38,7 @@ public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public String  _astreams_error() throws Exception{
  //BA.debugLineNum = 54;BA.debugLine="Private Sub astreams_Error";
  //BA.debugLineNum = 55;BA.debugLine="Log(\"error: \" & LastException)";
-__c.LogImpl("737552129","error: "+BA.ObjectToString(__c.LastException(getActivityBA())),0);
+__c.LogImpl("537289985","error: "+BA.ObjectToString(__c.LastException(getActivityBA())),0);
  //BA.debugLineNum = 56;BA.debugLine="astreams.Close";
 _astreams.Close();
  //BA.debugLineNum = 57;BA.debugLine="CallSubDelayed(mTarget, mEventName & \"_Terminated";

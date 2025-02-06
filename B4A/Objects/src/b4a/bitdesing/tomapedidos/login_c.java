@@ -86,7 +86,7 @@ _root = _root1;
  //BA.debugLineNum = 24;BA.debugLine="Root.LoadLayout(\"login_layout\")";
 _root.LoadLayout("login_layout",ba);
  //BA.debugLineNum = 25;BA.debugLine="Log(\"create login page\")";
-__c.LogImpl("732309251","create login page",0);
+__c.LogImpl("51835011","create login page",0);
  //BA.debugLineNum = 27;BA.debugLine="B4XPages.SetTitle(Me, \"Ingreso de usuarios\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Ingreso de usuarios"));
  //BA.debugLineNum = 29;BA.debugLine="txtPassword.TextField.Color = Colors.White";

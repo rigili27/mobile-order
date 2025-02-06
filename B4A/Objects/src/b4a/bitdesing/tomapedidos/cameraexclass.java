@@ -118,7 +118,7 @@ case 5:
 //C
 this.state = 6;
  //BA.debugLineNum = 328;BA.debugLine="Log(\"AutoFocus error.\")";
-parent.__c.LogImpl("740304645","AutoFocus error.",0);
+parent.__c.LogImpl("540304645","AutoFocus error.",0);
  if (true) break;
 
 case 6:
@@ -678,7 +678,7 @@ _setfocusmode("continuous-picture");
 _setfocusmode("continuous-video");
  }else {
  //BA.debugLineNum = 290;BA.debugLine="Log(\"Continuous focus mode is not available\")";
-__c.LogImpl("739911431","Continuous focus mode is not available",0);
+__c.LogImpl("539911431","Continuous focus mode is not available",0);
  };
  //BA.debugLineNum = 292;BA.debugLine="End Sub";
 return "";
