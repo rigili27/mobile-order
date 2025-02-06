@@ -35,4 +35,7 @@ Esta es la primera versión beta de la aplicación. Algunas funciones pueden no 
   - Exportación de datos en formato `.db`.
   - Interfaz básica optimizada para móviles.
 
+### `1.0.1-beta` `06-02-2025`
+- Se corrige Pagina de Products, intentaba agregar un product aun cuando no había un pedido generado.
+
 ---
