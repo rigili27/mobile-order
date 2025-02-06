@@ -78,6 +78,10 @@ End Sub
 Sub B4XPage_Appear
 	txtSearch_TextChanged("", "", Order)
 	B4XPages.SetTitle(Me, "Pedido nro: " & Order.ID)
+	
+	'pongo en 0 la variable
+	Dim products_page As products_c = B4XPages.GetPage("products_page")
+	products_page.CallOf = ""
 End Sub
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean 'Return True to consume the event
