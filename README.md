@@ -12,8 +12,8 @@
 ---
 
 ## Estado actual de la versión
-**Versión actual:** `1.0.0-beta`  
-**Fecha de lanzamiento:** `21-01-2025`  
+**Versión actual:** `1.0.2-beta`  
+**Fecha de lanzamiento:** `20-08-2025`  
 
 Esta es la primera versión beta de la aplicación. Algunas funciones pueden no estar completamente optimizadas o pueden requerir ajustes. Se agradece cualquier retroalimentación sobre errores o mejoras.
 
@@ -37,5 +37,13 @@ Esta es la primera versión beta de la aplicación. Algunas funciones pueden no 
 
 ### `1.0.1-beta` `06-02-2025`
 - Se corrige Pagina de Products, intentaba agregar un product aun cuando no había un pedido generado.
+
+### `1.0.2-beta` `20-08-2025`
+- Se corrige Pagina de Home, no cambiaba el nombre del Vendedor.
+- Se agrega long_lick al botón de recibir datos de pc.
+- Se da estilo a los botones.
+- Se cambia icono de aplicación.
+- Se agrega label de versión en MainPage.
+
 
 ---
