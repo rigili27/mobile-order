@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="b4a.bitdesing.tomapedidos"
+	package="b4a.bitdesing.mobileorder"
 	android:versionCode="1"
-	android:versionName="1.0.1-beta"
+	android:versionName="1.0.2-beta"
 	android:installLocation="internalOnly">
 	
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
@@ -19,7 +19,7 @@
 	<application
 		android:name="androidx.multidex.MultiDexApplication"
 		android:icon="@drawable/icon"
-		android:label="toma pedidos"
+		android:label="Toma Pedidos"
 		android:theme="@style/LightTheme"
 		android:requestLegacyExternalStorage="true">
 		
@@ -34,7 +34,7 @@
 		  android:value="@integer/google_play_services_version" />
 		<provider
 		    android:name="androidx.core.content.FileProvider"
-		    android:authorities="b4a.bitdesing.tomapedidos.provider"
+		    android:authorities="b4a.bitdesing.mobileorder.provider"
 		    android:exported="false"
 		    android:grantUriPermissions="true">
 		    <meta-data
@@ -45,7 +45,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".main"
-			android:label="toma pedidos"
+			android:label="Toma Pedidos"
 			android:screenOrientation="portrait"
 			android:exported="true">
 			<intent-filter>

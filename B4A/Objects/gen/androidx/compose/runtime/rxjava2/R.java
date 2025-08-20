@@ -479,8 +479,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #Capability_queryPatterns b4a.bitdesing.tomapedidos:queryPatterns}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Capability_shortcutMatchRequired b4a.bitdesing.tomapedidos:shortcutMatchRequired}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Capability_queryPatterns b4a.bitdesing.mobileorder:queryPatterns}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Capability_shortcutMatchRequired b4a.bitdesing.mobileorder:shortcutMatchRequired}</code></td><td></td></tr>
      * </table>
      * @see #Capability_queryPatterns
      * @see #Capability_shortcutMatchRequired
@@ -489,7 +489,7 @@ public final class R {
       0x7f030013, 0x7f030015
     };
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#queryPatterns}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#queryPatterns}
      * attribute's value can be found in the {@link #Capability} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -497,17 +497,17 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:queryPatterns
+     * @attr name b4a.bitdesing.mobileorder:queryPatterns
      */
     public static final int Capability_queryPatterns=0;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#shortcutMatchRequired}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#shortcutMatchRequired}
      * attribute's value can be found in the {@link #Capability} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:shortcutMatchRequired
+     * @attr name b4a.bitdesing.mobileorder:shortcutMatchRequired
      */
     public static final int Capability_shortcutMatchRequired=1;
     /**
@@ -520,8 +520,8 @@ public final class R {
      * <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_lStar android:lStar}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_alpha b4a.bitdesing.tomapedidos:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_lStar b4a.bitdesing.tomapedidos:lStar}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_alpha b4a.bitdesing.mobileorder:alpha}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_lStar b4a.bitdesing.mobileorder:lStar}</code></td><td></td></tr>
      * </table>
      * @see #ColorStateListItem_android_color
      * @see #ColorStateListItem_android_alpha
@@ -563,21 +563,21 @@ public final class R {
      */
     public static final int ColorStateListItem_android_lStar=2;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#alpha}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#alpha}
      * attribute's value can be found in the {@link #ColorStateListItem} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:alpha
+     * @attr name b4a.bitdesing.mobileorder:alpha
      */
     public static final int ColorStateListItem_alpha=3;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#lStar}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#lStar}
      * attribute's value can be found in the {@link #ColorStateListItem} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:lStar
+     * @attr name b4a.bitdesing.mobileorder:lStar
      */
     public static final int ColorStateListItem_lStar=4;
     /**
@@ -587,13 +587,13 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority b4a.bitdesing.tomapedidos:fontProviderAuthority}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts b4a.bitdesing.tomapedidos:fontProviderCerts}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy b4a.bitdesing.tomapedidos:fontProviderFetchStrategy}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout b4a.bitdesing.tomapedidos:fontProviderFetchTimeout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage b4a.bitdesing.tomapedidos:fontProviderPackage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery b4a.bitdesing.tomapedidos:fontProviderQuery}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderSystemFontFamily b4a.bitdesing.tomapedidos:fontProviderSystemFontFamily}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority b4a.bitdesing.mobileorder:fontProviderAuthority}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts b4a.bitdesing.mobileorder:fontProviderCerts}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy b4a.bitdesing.mobileorder:fontProviderFetchStrategy}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout b4a.bitdesing.mobileorder:fontProviderFetchTimeout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage b4a.bitdesing.mobileorder:fontProviderPackage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery b4a.bitdesing.mobileorder:fontProviderQuery}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderSystemFontFamily b4a.bitdesing.mobileorder:fontProviderSystemFontFamily}</code></td><td></td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -608,17 +608,17 @@ public final class R {
       0x7f030009, 0x7f03000a, 0x7f03000b
     };
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontProviderAuthority}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontProviderAuthority}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontProviderAuthority
+     * @attr name b4a.bitdesing.mobileorder:fontProviderAuthority
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontProviderCerts}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontProviderCerts}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -626,11 +626,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontProviderCerts
+     * @attr name b4a.bitdesing.mobileorder:fontProviderCerts
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontProviderFetchStrategy}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontProviderFetchStrategy}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -651,11 +651,11 @@ public final class R {
      * default typeface will be used instead.</td></tr>
      * </table>
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontProviderFetchStrategy
+     * @attr name b4a.bitdesing.mobileorder:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontProviderFetchTimeout}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontProviderFetchTimeout}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
@@ -669,37 +669,37 @@ public final class R {
      * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontProviderFetchTimeout
+     * @attr name b4a.bitdesing.mobileorder:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontProviderPackage}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontProviderPackage}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontProviderPackage
+     * @attr name b4a.bitdesing.mobileorder:fontProviderPackage
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontProviderQuery}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontProviderQuery}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontProviderQuery
+     * @attr name b4a.bitdesing.mobileorder:fontProviderQuery
      */
     public static final int FontFamily_fontProviderQuery=5;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontProviderSystemFontFamily}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontProviderSystemFontFamily}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontProviderSystemFontFamily
+     * @attr name b4a.bitdesing.mobileorder:fontProviderSystemFontFamily
      */
     public static final int FontFamily_fontProviderSystemFontFamily=6;
     /**
@@ -714,11 +714,11 @@ public final class R {
      * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font b4a.bitdesing.tomapedidos:font}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle b4a.bitdesing.tomapedidos:fontStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings b4a.bitdesing.tomapedidos:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight b4a.bitdesing.tomapedidos:fontWeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_ttcIndex b4a.bitdesing.tomapedidos:ttcIndex}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font b4a.bitdesing.mobileorder:font}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle b4a.bitdesing.mobileorder:fontStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings b4a.bitdesing.mobileorder:fontVariationSettings}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight b4a.bitdesing.mobileorder:fontWeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_ttcIndex b4a.bitdesing.mobileorder:ttcIndex}</code></td><td></td></tr>
      * </table>
      * @see #FontFamilyFont_android_font
      * @see #FontFamilyFont_android_fontWeight
@@ -794,7 +794,7 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontVariationSettings=4;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#font}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#font}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -802,11 +802,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:font
+     * @attr name b4a.bitdesing.mobileorder:font
      */
     public static final int FontFamilyFont_font=5;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontStyle}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontStyle}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -819,35 +819,35 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontStyle
+     * @attr name b4a.bitdesing.mobileorder:fontStyle
      */
     public static final int FontFamilyFont_fontStyle=6;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontVariationSettings}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontVariationSettings}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontVariationSettings
+     * @attr name b4a.bitdesing.mobileorder:fontVariationSettings
      */
     public static final int FontFamilyFont_fontVariationSettings=7;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontWeight}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#fontWeight}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:fontWeight
+     * @attr name b4a.bitdesing.mobileorder:fontWeight
      */
     public static final int FontFamilyFont_fontWeight=8;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#ttcIndex}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#ttcIndex}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:ttcIndex
+     * @attr name b4a.bitdesing.mobileorder:ttcIndex
      */
     public static final int FontFamilyFont_ttcIndex=9;
     /**
@@ -1167,9 +1167,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #LoadingImageView_circleCrop b4a.bitdesing.tomapedidos:circleCrop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LoadingImageView_imageAspectRatio b4a.bitdesing.tomapedidos:imageAspectRatio}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust b4a.bitdesing.tomapedidos:imageAspectRatioAdjust}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_circleCrop b4a.bitdesing.mobileorder:circleCrop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatio b4a.bitdesing.mobileorder:imageAspectRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust b4a.bitdesing.mobileorder:imageAspectRatioAdjust}</code></td><td></td></tr>
      * </table>
      * @see #LoadingImageView_circleCrop
      * @see #LoadingImageView_imageAspectRatio
@@ -1179,26 +1179,26 @@ public final class R {
       0x7f030002, 0x7f03000f, 0x7f030010
     };
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#circleCrop}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#circleCrop}
      * attribute's value can be found in the {@link #LoadingImageView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:circleCrop
+     * @attr name b4a.bitdesing.mobileorder:circleCrop
      */
     public static final int LoadingImageView_circleCrop=0;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#imageAspectRatio}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#imageAspectRatio}
      * attribute's value can be found in the {@link #LoadingImageView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name b4a.bitdesing.tomapedidos:imageAspectRatio
+     * @attr name b4a.bitdesing.mobileorder:imageAspectRatio
      */
     public static final int LoadingImageView_imageAspectRatio=1;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#imageAspectRatioAdjust}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#imageAspectRatioAdjust}
      * attribute's value can be found in the {@link #LoadingImageView} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -1212,7 +1212,7 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name b4a.bitdesing.tomapedidos:imageAspectRatioAdjust
+     * @attr name b4a.bitdesing.mobileorder:imageAspectRatioAdjust
      */
     public static final int LoadingImageView_imageAspectRatioAdjust=2;
     /**
@@ -1222,9 +1222,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #SignInButton_buttonSize b4a.bitdesing.tomapedidos:buttonSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SignInButton_colorScheme b4a.bitdesing.tomapedidos:colorScheme}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SignInButton_scopeUris b4a.bitdesing.tomapedidos:scopeUris}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_buttonSize b4a.bitdesing.mobileorder:buttonSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_colorScheme b4a.bitdesing.mobileorder:colorScheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_scopeUris b4a.bitdesing.mobileorder:scopeUris}</code></td><td></td></tr>
      * </table>
      * @see #SignInButton_buttonSize
      * @see #SignInButton_colorScheme
@@ -1234,7 +1234,7 @@ public final class R {
       0x7f030001, 0x7f030003, 0x7f030014
     };
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#buttonSize}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#buttonSize}
      * attribute's value can be found in the {@link #SignInButton} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1252,11 +1252,11 @@ public final class R {
      * <tr><td>wide</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name b4a.bitdesing.tomapedidos:buttonSize
+     * @attr name b4a.bitdesing.mobileorder:buttonSize
      */
     public static final int SignInButton_buttonSize=0;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#colorScheme}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#colorScheme}
      * attribute's value can be found in the {@link #SignInButton} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1274,11 +1274,11 @@ public final class R {
      * <tr><td>light</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name b4a.bitdesing.tomapedidos:colorScheme
+     * @attr name b4a.bitdesing.mobileorder:colorScheme
      */
     public static final int SignInButton_colorScheme=1;
     /**
-     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#scopeUris}
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.mobileorder.R.attr#scopeUris}
      * attribute's value can be found in the {@link #SignInButton} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1288,7 +1288,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name b4a.bitdesing.tomapedidos:scopeUris
+     * @attr name b4a.bitdesing.mobileorder:scopeUris
      */
     public static final int SignInButton_scopeUris=2;
   }

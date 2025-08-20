@@ -21,9 +21,9 @@ Sub Class_Globals
 	Private PanelDetailProduct As B4XView
 	
 	'product_item_layout
-	Private lblSKU As B4XView
-	Private lblDescription As B4XView
-	Private lblPrecio As Label
+'	Private lblSKU As B4XView
+'	Private lblDescription As B4XView
+'	Private lblPrecio As Label
 	
 	'products_add_order_item_layout
 	Private dialog As B4XDialog
@@ -105,7 +105,7 @@ Private Sub txtSearch_TextChanged (Old As String, New As String)
 			
 			Dim p As Panel
 			p = xui.CreatePanel("")
-			p.SetLayoutAnimated(0, 0, 0, clvProducts.AsView.Width, 112dip)
+			p.SetLayoutAnimated(0, 0, 0, clvProducts.AsView.Width, 130dip)
 			clvProducts.Add(p, PD)
 			
 		Loop
@@ -116,27 +116,72 @@ Private Sub txtSearch_TextChanged (Old As String, New As String)
 End Sub
 
 Private Sub clvProducts_VisibleRangeChanged (FirstIndex As Int, LastIndex As Int)
-'	Log(FirstIndex & "   -   " & LastIndex)
 	Dim extra As Int = 10
 	For i = Max(0, FirstIndex - extra) To Min(LastIndex + extra, clvProducts.Size - 1)
 		Dim p As Panel = clvProducts.GetPanel(i)
 		If i > FirstIndex - extra And i < LastIndex + extra Then
 			If p.NumberOfViews = 0 Then
 				Dim PD As ProductsData = clvProducts.GetValue(i)
-				p.LoadLayout("product_item_layout")
-				lblDescription.Text = PD.DESCRIPCION
-				lblSKU.Text = "SKU: " & PD.SKU
 				
+				' Imagen redonda
+				Dim ivRound As B4XView = xui.CreatePanel("")
+				ivRound.SetLayoutAnimated(0, 0, 0, 50dip, 50dip)
+				ivRound.SetColorAndBorder(Colors.Transparent, 0, 0, 30dip)
+				ivRound.SetBitmap(LoadBitmapResize(File.DirAssets, "product.png", 50dip, 50dip, True))
+				p.AddView(ivRound, 5dip, 15dip, 50dip, 50dip)
+
+				' --- Descripción ---
+				Dim lblDescription As Label
+				lblDescription.Initialize("")
+				lblDescription.Text = PD.DESCRIPCION
+				lblDescription.TextSize = 20
+				lblDescription.Typeface = Typeface.DEFAULT_BOLD
+				lblDescription.TextColor = Colors.Black
+				lblDescription.SingleLine = False
+				lblDescription.Gravity = Bit.Or(Gravity.TOP, Gravity.LEFT)
+				p.AddView(lblDescription, 75dip, 13dip, p.Width - 20dip, 60dip) ' alto suficiente para 2 líneas
+
+				
+'				' --- Precio ---
+				Dim lblPrecio As Label
+				lblPrecio.Initialize("")
 				If Customer <> Null And Customer.NROLPRECIOS = 1 Then
 					lblPrecio.Text = "$ " & PD.PREVTAPUB1
 				Else If Customer <> Null And Customer.NROLPRECIOS = 2 Then
 					lblPrecio.Text = "$ " & PD.PREVTAPUB2
-				Else If	Customer <> Null And Customer.NROLPRECIOS = 3 Then
+				Else If Customer <> Null And Customer.NROLPRECIOS = 3 Then
 					lblPrecio.Text = "$ " & PD.PREVTAPUB3
 				Else
 					lblPrecio.Text = "$ " & PD.PREVTAPUB1
 				End If
-					
+				lblPrecio.TextSize = 22
+				lblPrecio.TextColor = Colors.RGB(0,128,0) ' verde para resaltar precio
+				lblPrecio.Typeface = Typeface.DEFAULT_BOLD
+				p.AddView(lblPrecio, 75dip, 60dip, p.Width - 20dip, 30dip)
+
+				' --- Código ---
+				Dim lblCodigo As Label
+				lblCodigo.Initialize("")
+				lblCodigo.Text = "🔢 Código: " & PD.CODIGO
+				lblCodigo.TextSize = 16
+				lblCodigo.TextColor = Colors.Black
+				p.AddView(lblCodigo, 75dip, 95dip, p.Width/2 - 15dip, 20dip)
+
+				' --- SKU ---
+				Dim lblSKU As Label
+				lblSKU.Initialize("")
+				lblSKU.Text = "📦 SKU: " & PD.SKU
+				lblSKU.TextSize = 16
+				lblSKU.TextColor = Colors.Black
+				p.AddView(lblSKU, p.Width/2, 95dip, p.Width/2 - 10dip, 20dip)
+
+				
+
+				' --- Divider ---
+				Dim divider As B4XView = xui.CreatePanel("")
+				divider.Color = xui.Color_LightGray
+				p.AddView(divider, 0, p.Height - 1dip, p.Width, 1dip)
+
 			End If
 		Else
 			If p.NumberOfViews > 0 Then
@@ -145,6 +190,38 @@ Private Sub clvProducts_VisibleRangeChanged (FirstIndex As Int, LastIndex As Int
 		End If
 	Next
 End Sub
+
+
+'Private Sub OLDclvProducts_VisibleRangeChanged (FirstIndex As Int, LastIndex As Int)
+''	Log(FirstIndex & "   -   " & LastIndex)
+'	Dim extra As Int = 10
+'	For i = Max(0, FirstIndex - extra) To Min(LastIndex + extra, clvProducts.Size - 1)
+'		Dim p As Panel = clvProducts.GetPanel(i)
+'		If i > FirstIndex - extra And i < LastIndex + extra Then
+'			If p.NumberOfViews = 0 Then
+'				Dim PD As ProductsData = clvProducts.GetValue(i)
+'				p.LoadLayout("product_item_layout")
+'				lblDescription.Text = PD.DESCRIPCION
+'				lblSKU.Text = "SKU: " & PD.SKU
+'				
+'				If Customer <> Null And Customer.NROLPRECIOS = 1 Then
+'					lblPrecio.Text = "$ " & PD.PREVTAPUB1
+'				Else If Customer <> Null And Customer.NROLPRECIOS = 2 Then
+'					lblPrecio.Text = "$ " & PD.PREVTAPUB2
+'				Else If	Customer <> Null And Customer.NROLPRECIOS = 3 Then
+'					lblPrecio.Text = "$ " & PD.PREVTAPUB3
+'				Else
+'					lblPrecio.Text = "$ " & PD.PREVTAPUB1
+'				End If
+'					
+'			End If
+'		Else
+'			If p.NumberOfViews > 0 Then
+'				p.RemoveAllViews
+'			End If
+'		End If
+'	Next
+'End Sub
 
 Private Sub btnClearSearch_Click
 	txtSearch.Text = ""

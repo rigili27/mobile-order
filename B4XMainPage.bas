@@ -24,7 +24,9 @@ Sub Class_Globals
 	Dim customers As customers_c
 	Dim settings As settings_c
 	Dim scan As scan_c
-	Private btnLogin As Button
+	Private btnLogin As B4XView
+	
+	Private lblInfo As B4XView
 End Sub
 
 Public Sub Initialize
@@ -37,7 +39,11 @@ Private Sub B4XPage_Created (Root1 As B4XView)
 	Root = Root1
 	Root.LoadLayout("MainPage")
 	
-	B4XPages.SetTitle(Me, "Mobile Order")
+	B4XPages.SetTitle(Me, "Mobile Order")	
+	
+	btnLogin.SetColorAndBorder(Colors.RGB(240,248,255), 1dip, Colors.LightGray, 5dip)
+	
+	lblInfo.Text = "Versión: " & Application.VersionName
 	
 '	CopyDataBase
 	
@@ -98,4 +104,5 @@ Private Sub Button1_Click
 	CopyDataBase
 	
 End Sub
+
 

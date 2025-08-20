@@ -76,7 +76,7 @@ Private Sub txtSearch_TextChanged (Old As String, New As String)
 			
 			Dim p As Panel
 			p = xui.CreatePanel("")
-			p.SetLayoutAnimated(0, 0, 0, clvCustomers.AsView.Width, 108dip)
+			p.SetLayoutAnimated(0, 0, 0, clvCustomers.AsView.Width, 125dip)
 			clvCustomers.Add(p, CD)
 			
 		Loop
@@ -86,9 +86,84 @@ Private Sub txtSearch_TextChanged (Old As String, New As String)
 	
 End Sub
 
-
-
 Private Sub clvCustomers_VisibleRangeChanged (FirstIndex As Int, LastIndex As Int)
+	Dim extra As Int = 10
+	For i = Max(0, FirstIndex - extra) To Min(LastIndex + extra, clvCustomers.Size - 1)
+		Dim p As Panel = clvCustomers.GetPanel(i)
+		If i > FirstIndex - extra And i < LastIndex + extra Then
+			If p.NumberOfViews = 0 Then
+				Dim CD As CustomersData = clvCustomers.GetValue(i)
+				
+				' Imagen redonda
+				Dim ivRound As B4XView = xui.CreatePanel("")
+				ivRound.SetLayoutAnimated(0, 0, 0, 50dip, 50dip)
+				ivRound.SetColorAndBorder(Colors.Transparent, 0, 0, 30dip)
+				ivRound.SetBitmap(LoadBitmapResize(File.DirAssets, "user.png", 50dip, 50dip, True))
+				p.AddView(ivRound, 5dip, 15dip, 50dip, 50dip)
+
+				' Nombre
+				Dim lblName As Label
+				lblName.Initialize("")
+				lblName.Text = CD.NOMBRE
+				lblName.TextSize = 20
+				lblName.Typeface = Typeface.DEFAULT_BOLD
+				lblName.TextColor = Colors.DarkGray
+				p.AddView(lblName, 75dip, 13dip, 100%x - 160dip, 22dip)
+				
+				' CUIT
+				Dim lblCuit As Label
+				lblCuit.Initialize("")
+				lblCuit.Text = "💳 CUIT: " & CD.NROCUIT
+				lblCuit.TextSize = 18
+				lblCuit.Typeface = Typeface.DEFAULT_BOLD
+				lblCuit.TextColor = Colors.DarkGray
+				p.AddView(lblCuit, 75dip, 50dip, 100%x - 160dip, 20dip)
+
+				' Código
+				Dim lblCat As Label
+				lblCat.Initialize("")
+				lblCat.Text = "🏷️ Codigo: " & CD.CODIGO
+				lblCat.TextSize = 18
+				lblCat.Typeface = Typeface.DEFAULT_BOLD
+				lblCat.TextColor = Colors.DarkGray
+				p.AddView(lblCat, 320dip, 50dip, 100%x - 160dip, 20dip)
+
+				' Dirección
+				Dim lblAddress As Label
+				lblAddress.Initialize("")
+				lblAddress.Text = "📍 " & CD.LOCALIDAD & " - " & CD.DOMICILIO
+				lblAddress.TextSize = 18
+				lblAddress.TextColor = Colors.Black
+				p.AddView(lblAddress, 75dip, 80dip, 100%x - 160dip, 20dip)
+
+				' Teléfono
+'				Dim lblPhone As Label
+'				lblPhone.Initialize("")
+'				lblPhone.Text = "📞 " & CD.TELEFONO
+'				lblPhone.TextSize = 18
+'				lblPhone.TextColor = Colors.Black
+'				p.AddView(lblPhone, 75dip, 105dip, 100%x - 160dip, 20dip)
+
+				
+
+				' Línea divisoria inferior
+				Dim divider As B4XView = xui.CreatePanel("")
+				divider.Color = xui.Color_LightGray
+				p.AddView(divider, 0, p.Height - 1dip, 100%x, 1dip)
+
+				
+			End If
+		Else
+			If p.NumberOfViews > 0 Then
+				p.RemoveAllViews
+			End If
+		End If
+	Next
+End Sub
+
+
+'NO USADA MAS. USAR LA FUNCION DE ARRIBA
+Private Sub ODLclvCustomers_VisibleRangeChanged (FirstIndex As Int, LastIndex As Int)
 	'	Log(FirstIndex & "   -   " & LastIndex)
 	Dim extra As Int = 10
 	For i = Max(0, FirstIndex - extra) To Min(LastIndex + extra, clvCustomers.Size - 1)

@@ -15,6 +15,9 @@ Sub Class_Globals
 	Private ime As IME
 	Private txtIP As EditText
 	
+	Private btnEnviar As B4XView
+	Private btnRecibir As B4XView
+	Private btnShare As B4XView
 End Sub
 
 'You can add more parameters here.
@@ -28,9 +31,58 @@ Private Sub B4XPage_Created (Root1 As B4XView)
 	Root.LoadLayout("settings_layout")
 	Log("create settings page")
 	
+	'menu items
+	B4XPages.SetTitle(Me, "Configuración")
+	
 	ime.Initialize("")
 	ime.SetCustomFilter(txtIP, txtIP.INPUT_TYPE_NUMBERS, "0123456789.")
 	
+	
+	
+	' --- Cards con estilo ---
+	CreateCard("btnEnviar", "📱 -> ️🖥️", "Enviar Datos a PC", 20dip, 400dip, Root.Width/2 - 30dip, 110dip, Colors.RGB(245,255,250), "")
+	CreateCard("btnRecibir", "📱 <- ️🖥️", "Recibir Datos de PC", Root.Width/2 + 10dip, 400dip, Root.Width/2 - 30dip, 110dip, Colors.RGB(250,240,230), "Mantener presionado")
+	CreateCard("btnShare", "📱 -> 🔗", "Compartir Datos", 20dip, 520dip, Root.Width/2 - 30dip, 110dip, Colors.RGB(240,248,255), "")
+	
+'	btnEnviar.SetColorAndBorder(Colors.RGB(245,255,250), 1dip, Colors.LightGray, 5dip)
+'	btnEnviar.Text = "💾  Enviar Datos a PC"
+'	btnRecibir.SetColorAndBorder(Colors.RGB(250,240,230), 1dip, Colors.LightGray, 5dip)
+'	btnRecibir.Text = "⬇️  Recibir Datos de PC"
+	btnShare.SetColorAndBorder(Colors.RGB(240,248,255), 1dip, Colors.LightGray, 5dip)
+	btnShare.Text = "🔗  Compartir Datos"
+	
+End Sub
+
+Private Sub CreateCard(EventName As String, Emoji As String, Title As String, Left As Int, Top As Int, Width As Int, Height As Int, BgColor As Int, Tip As String)
+	Dim pnl As B4XView = xui.CreatePanel(EventName)
+	pnl.SetLayoutAnimated(0, Left, Top, Width, Height)
+	pnl.SetColorAndBorder(BgColor, 1dip, Colors.LightGray, 15dip)
+	Root.AddView(pnl, Left, Top, Width, Height)
+    
+	' Emoji arriba
+	Dim lblIcon As Label
+	lblIcon.Initialize("")
+	lblIcon.Text = Emoji
+	lblIcon.TextSize = 32
+	lblIcon.Gravity = Gravity.CENTER
+	pnl.AddView(lblIcon, 0, 10dip, pnl.Width, 40dip)
+    
+	' Título abajo
+	Dim lblTitle As Label
+	lblTitle.Initialize("")
+	lblTitle.Text = Title
+	lblTitle.TextSize = 18
+	lblTitle.TextColor = Colors.Black
+	lblTitle.Gravity = Gravity.CENTER
+	pnl.AddView(lblTitle, 0, 55dip, pnl.Width, 30dip)
+	
+	Dim lblTitle As Label
+	lblTitle.Initialize("")
+	lblTitle.Text = Tip
+	lblTitle.TextSize = 14
+	lblTitle.TextColor = Colors.Gray
+	lblTitle.Gravity = Gravity.CENTER
+	pnl.AddView(lblTitle, 0, 72dip, pnl.Width, 30dip)
 End Sub
 
 Sub B4XPage_Appear
@@ -54,7 +106,7 @@ Private Sub btnEnviar_Click
 	
 End Sub
 
-Private Sub btnRecibir_Click
+Private Sub btnRecibir_LongClick
 	
 	'Descarga la nueva base de datos del FTP de la pc
 	If Not (IsValidIp(txtIP.Text)) Then
@@ -122,4 +174,9 @@ End Sub
 
 Private Sub btnShare_Click
 	Starter.ShareDataBase
+End Sub
+
+
+Private Sub btnRecibir_Click
+	ToastMessageShow("Mantener presionado para Recibir Datos.",False)
 End Sub

@@ -17,6 +17,7 @@ Sub Class_Globals
 	Type SellerData (CODIGO As Int, NOMBRE As String, CLAVE As String)
 	
 	Private txtPassword As B4XFloatTextField
+	Private btnLogin As B4XView
 End Sub
 
 'You can add more parameters here.
@@ -33,6 +34,9 @@ Private Sub B4XPage_Created (Root1 As B4XView)
 	B4XPages.SetTitle(Me, "Ingreso de usuarios")
 	
 	txtPassword.TextField.Color = Colors.White
+	
+	btnLogin.SetColorAndBorder(Colors.RGB(240,248,255), 1dip, Colors.LightGray, 5dip)
+	
 	
 End Sub
 
@@ -72,9 +76,10 @@ Private Sub btnLogin_Click
 				B4XPages.ClosePage(B4XPages.GetPage("login_page"))
 				B4XPages.ShowPageAndRemovePreviousPages("home_page")
 			Else
-				dialog.Initialize(Root)
-				dialog.Title = "Clave incorrecta!!"
-				dialog.Show("Intanta nuevamente.", "Ok", "", "")
+'				dialog.Initialize(Root)
+'				dialog.Title = "Clave incorrecta!!"
+'				dialog.Show("Intanta nuevamente.", "Ok", "", "")
+				Msgbox2Async("Clave incorrecta!!. Intente nuevamente.","Atención","Aceptar","","",Null,False)
 			End If
 				
 		Loop
