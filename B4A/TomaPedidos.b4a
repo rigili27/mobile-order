@@ -1,4 +1,5 @@
 ﻿Build1=MobileOrder,b4a.bitdesing.mobileorder
+Build2=TomaPedidos,b4a.bitdesing.tomapedidos
 File1=customer_item_layout.bal
 File10=order_product_item_layout.bal
 File11=orders_layout.bal
@@ -45,6 +46,7 @@ Library12=sql
 Library13=xcustomlistview
 Library14=xui
 Library15=xui views
+Library16=accessibility
 Library2=camera
 Library3=contentresolver
 Library4=core
@@ -70,7 +72,7 @@ Module7=FTPServer
 Module8=home_c
 Module9=login_c
 NumberOfFiles=19
-NumberOfLibraries=15
+NumberOfLibraries=16
 NumberOfModules=15
 Version=13.3
 @EndOfDesignText@

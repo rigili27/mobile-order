@@ -105,7 +105,7 @@ Private Sub clvCustomers_VisibleRangeChanged (FirstIndex As Int, LastIndex As In
 				Dim lblName As Label
 				lblName.Initialize("")
 				lblName.Text = CD.NOMBRE
-				lblName.TextSize = 20
+				lblName.TextSize = 14
 				lblName.Typeface = Typeface.DEFAULT_BOLD
 				lblName.TextColor = Colors.DarkGray
 				p.AddView(lblName, 75dip, 13dip, 100%x - 160dip, 22dip)
@@ -114,7 +114,7 @@ Private Sub clvCustomers_VisibleRangeChanged (FirstIndex As Int, LastIndex As In
 				Dim lblCuit As Label
 				lblCuit.Initialize("")
 				lblCuit.Text = "💳 CUIT: " & CD.NROCUIT
-				lblCuit.TextSize = 18
+				lblCuit.TextSize = 12
 				lblCuit.Typeface = Typeface.DEFAULT_BOLD
 				lblCuit.TextColor = Colors.DarkGray
 				p.AddView(lblCuit, 75dip, 50dip, 100%x - 160dip, 20dip)
@@ -123,16 +123,16 @@ Private Sub clvCustomers_VisibleRangeChanged (FirstIndex As Int, LastIndex As In
 				Dim lblCat As Label
 				lblCat.Initialize("")
 				lblCat.Text = "🏷️ Codigo: " & CD.CODIGO
-				lblCat.TextSize = 18
+				lblCat.TextSize = 12
 				lblCat.Typeface = Typeface.DEFAULT_BOLD
 				lblCat.TextColor = Colors.DarkGray
-				p.AddView(lblCat, 320dip, 50dip, 100%x - 160dip, 20dip)
+				p.AddView(lblCat, 70%x, 50dip, 100%x - 160dip, 20dip)
 
 				' Dirección
 				Dim lblAddress As Label
 				lblAddress.Initialize("")
 				lblAddress.Text = "📍 " & CD.LOCALIDAD & " - " & CD.DOMICILIO
-				lblAddress.TextSize = 18
+				lblAddress.TextSize = 12
 				lblAddress.TextColor = Colors.Black
 				p.AddView(lblAddress, 75dip, 80dip, 100%x - 160dip, 20dip)
 

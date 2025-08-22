@@ -24,6 +24,8 @@ Sub Process_Globals
 	Public Provider As FileProvider
 	Public Server As FTPServer
 	
+	Dim access As Accessiblity
+	
 	'GLOBAL
 	Dim Seller As SellerData
 	
@@ -177,4 +179,20 @@ Public Sub GetFileUri (FileName As String) As Object
 	context.InitializeContext
 	fp.InitializeStatic("android.support.v4.content.FileProvider")
 	Return fp.RunMethod("getUriForFile", Array(context, Application.PackageName & ".provider", f))
+End Sub
+
+Sub ResetUserFontScale(p As Panel)
+	For Each v As View In p
+		If v Is Panel Then
+			ResetUserFontScale(v)
+		Else If v Is Label Then
+			Dim lbl As Label = v
+'			lbl.TextSize = lbl.TextSize / Starter.access.GetUserFontScale-4
+			lbl.TextSize = lbl.TextSize / access.GetUserFontScale
+		Else If v Is Spinner Then
+			Dim s As Spinner = v
+'			s.TextSize = s.TextSize / Starter.access.GetUserFontScale-4
+			s.TextSize = s.TextSize / access.GetUserFontScale
+		End If
+	Next
 End Sub

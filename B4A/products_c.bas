@@ -134,7 +134,7 @@ Private Sub clvProducts_VisibleRangeChanged (FirstIndex As Int, LastIndex As Int
 				Dim lblDescription As Label
 				lblDescription.Initialize("")
 				lblDescription.Text = PD.DESCRIPCION
-				lblDescription.TextSize = 20
+				lblDescription.TextSize = 14
 				lblDescription.Typeface = Typeface.DEFAULT_BOLD
 				lblDescription.TextColor = Colors.Black
 				lblDescription.SingleLine = False
@@ -154,7 +154,7 @@ Private Sub clvProducts_VisibleRangeChanged (FirstIndex As Int, LastIndex As Int
 				Else
 					lblPrecio.Text = "$ " & PD.PREVTAPUB1
 				End If
-				lblPrecio.TextSize = 22
+				lblPrecio.TextSize = 15
 				lblPrecio.TextColor = Colors.RGB(0,128,0) ' verde para resaltar precio
 				lblPrecio.Typeface = Typeface.DEFAULT_BOLD
 				p.AddView(lblPrecio, 75dip, 60dip, p.Width - 20dip, 30dip)
@@ -163,7 +163,7 @@ Private Sub clvProducts_VisibleRangeChanged (FirstIndex As Int, LastIndex As Int
 				Dim lblCodigo As Label
 				lblCodigo.Initialize("")
 				lblCodigo.Text = "🔢 Código: " & PD.CODIGO
-				lblCodigo.TextSize = 16
+				lblCodigo.TextSize = 12
 				lblCodigo.TextColor = Colors.Black
 				p.AddView(lblCodigo, 75dip, 95dip, p.Width/2 - 15dip, 20dip)
 
@@ -171,9 +171,9 @@ Private Sub clvProducts_VisibleRangeChanged (FirstIndex As Int, LastIndex As Int
 				Dim lblSKU As Label
 				lblSKU.Initialize("")
 				lblSKU.Text = "📦 SKU: " & PD.SKU
-				lblSKU.TextSize = 16
+				lblSKU.TextSize = 12
 				lblSKU.TextColor = Colors.Black
-				p.AddView(lblSKU, p.Width/2, 95dip, p.Width/2 - 10dip, 20dip)
+				p.AddView(lblSKU, 50%x, 95dip, p.Width/2 - 10dip, 20dip)
 
 				
 

@@ -7,6 +7,11 @@ Version=13
 Sub Class_Globals
 	Private Root As B4XView 'ignore
 	Private xui As XUI 'ignore
+	
+	Dim ivLogo As ImageView
+	Dim lblSeller As Label
+	Dim lblCompany As Label
+	
 End Sub
 
 'You can add more parameters here.
@@ -28,13 +33,13 @@ Private Sub B4XPage_Created (Root1 As B4XView)
 '	addItem.AddToBar = True
 
 	' --- Logo / Imagen ---
-	Dim ivLogo As ImageView
+'	Dim ivLogo As ImageView
 	ivLogo.Initialize("")
 	ivLogo.Bitmap = LoadBitmapResize(File.DirAssets, "user.png", 100dip, 100dip, True)
 	Root.AddView(ivLogo, Root.Width/2 - 50dip, 30dip, 100dip, 100dip)
     
 	' --- Nombre vendedor ---
-	Dim lblSeller As Label
+'	Dim lblSeller As Label
 	lblSeller.Initialize("")
 	lblSeller.Text = Starter.Seller.NOMBRE
 	lblSeller.TextSize = 20
@@ -43,7 +48,7 @@ Private Sub B4XPage_Created (Root1 As B4XView)
 	Root.AddView(lblSeller, 0, 140dip, Root.Width, 30dip)
     
 	' --- Empresa ---
-	Dim lblCompany As Label
+'	Dim lblCompany As Label
 	lblCompany.Initialize("")
 	lblCompany.Text = Starter.SelectBusiness.RAZONSOCIAL.Trim
 	lblCompany.TextSize = 14
@@ -87,7 +92,13 @@ End Sub
 
 Sub B4XPage_Appear
 	
-'	B4XPages.SetTitle(Me, "👤 " & Starter.Seller.NOMBRE & " ")
+	' --- Logo / Imagen ---
+	
+	' --- Nombre vendedor --
+	lblSeller.Text = Starter.Seller.NOMBRE
+	
+	' --- Empresa ---
+	lblCompany.Text = Starter.SelectBusiness.RAZONSOCIAL.Trim
 
 	
 End Sub

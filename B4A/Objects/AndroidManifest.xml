@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="b4a.bitdesing.mobileorder"
+	package="b4a.bitdesing.tomapedidos"
 	android:versionCode="1"
 	android:versionName="1.0.2-beta"
 	android:installLocation="internalOnly">
@@ -34,7 +34,7 @@
 		  android:value="@integer/google_play_services_version" />
 		<provider
 		    android:name="androidx.core.content.FileProvider"
-		    android:authorities="b4a.bitdesing.mobileorder.provider"
+		    android:authorities="b4a.bitdesing.tomapedidos.provider"
 		    android:exported="false"
 		    android:grantUriPermissions="true">
 		    <meta-data
