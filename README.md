@@ -12,8 +12,8 @@
 ---
 
 ## Estado actual de la versión
-**Versión actual:** `1.0.2-beta`  
-**Fecha de lanzamiento:** `20-08-2025`  
+**Versión actual:** `1.0.5-beta`  
+**Fecha de lanzamiento:** `17-10-2025`  
 
 Esta es la primera versión beta de la aplicación. Algunas funciones pueden no estar completamente optimizadas o pueden requerir ajustes. Se agradece cualquier retroalimentación sobre errores o mejoras.
 
@@ -44,6 +44,11 @@ Esta es la primera versión beta de la aplicación. Algunas funciones pueden no 
 - Se da estilo a los botones.
 - Se cambia icono de aplicación.
 - Se agrega label de versión en MainPage.
+
+### `1.0.5-beta` `17-10-2025`
+- Se incorpora remito en PDF para enviar al cliente. En Pagina de Orden.
+- Se incorpora auto-update al iniciar la aplicación.
+
 
 
 ---
