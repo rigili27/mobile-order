@@ -69,19 +69,41 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int font=0x7f030004;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int fontProviderAuthority=0x7f030005;
+    public static final int coordinatorLayoutStyle=0x7f030004;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int fontProviderCerts=0x7f030006;
+    public static final int drawerLayoutStyle=0x7f030005;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int elevation=0x7f030006;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int font=0x7f030007;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int fontProviderAuthority=0x7f030008;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int fontProviderCerts=0x7f030009;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -101,7 +123,7 @@ public final class R {
      * default typeface will be used instead.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchStrategy=0x7f030007;
+    public static final int fontProviderFetchStrategy=0x7f03000a;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
@@ -114,22 +136,22 @@ public final class R {
      * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchTimeout=0x7f030008;
+    public static final int fontProviderFetchTimeout=0x7f03000b;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderPackage=0x7f030009;
+    public static final int fontProviderPackage=0x7f03000c;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderQuery=0x7f03000a;
+    public static final int fontProviderQuery=0x7f03000d;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderSystemFontFamily=0x7f03000b;
+    public static final int fontProviderSystemFontFamily=0x7f03000e;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -141,20 +163,20 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontStyle=0x7f03000c;
+    public static final int fontStyle=0x7f03000f;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontVariationSettings=0x7f03000d;
+    public static final int fontVariationSettings=0x7f030010;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int fontWeight=0x7f03000e;
+    public static final int fontWeight=0x7f030011;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int imageAspectRatio=0x7f03000f;
+    public static final int imageAspectRatio=0x7f030012;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -167,25 +189,129 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int imageAspectRatioAdjust=0x7f030010;
+    public static final int imageAspectRatioAdjust=0x7f030013;
+    /**
+     * A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.
+     * Child views can refer to these keylines for alignment using
+     * layout_keyline="index" where index is a 0-based index into
+     * this array.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int keylines=0x7f030014;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int lStar=0x7f030011;
+    public static final int lStar=0x7f030015;
+    /**
+     * The id of an anchor view that this view should position relative to.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int layout_anchor=0x7f030016;
+    /**
+     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the horizontal gravity: a left gravity will clip the right
+     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
+     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * </table>
+     */
+    public static final int layout_anchorGravity=0x7f030017;
+    /**
+     * The class name of a Behavior class defining special runtime behavior
+     * for this child view.
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int layout_behavior=0x7f030018;
+    /**
+     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
+     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
+     * </table>
+     */
+    public static final int layout_dodgeInsetEdges=0x7f030019;
+    /**
+     * Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
+     * </table>
+     */
+    public static final int layout_insetEdge=0x7f03001a;
+    /**
+     * The index of a keyline this view should position relative to.
+     * android:layout_gravity will affect how the view aligns to the
+     * specified keyline.
+     * <p>May be an integer value, such as "<code>100</code>".
+     */
+    public static final int layout_keyline=0x7f03001b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int nestedScrollViewStyle=0x7f030012;
+    public static final int nestedScrollViewStyle=0x7f03001c;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int queryPatterns=0x7f030013;
+    public static final int queryPatterns=0x7f03001d;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -194,16 +320,34 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int scopeUris=0x7f030014;
+    public static final int scopeUris=0x7f03001e;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int shortcutMatchRequired=0x7f030015;
+    public static final int shortcutMatchRequired=0x7f03001f;
+    /**
+     * Drawable to display behind the status bar when the view is set to draw behind it.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int statusBarBackground=0x7f030020;
+    /**
+     * Background color for SwipeRefreshLayout progress spinner.
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int swipeRefreshLayoutProgressSpinnerBackgroundColor=0x7f030021;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ttcIndex=0x7f030016;
+    public static final int ttcIndex=0x7f030022;
   }
   public static final class color {
     public static final int androidx_core_ripple_material_light=0x7f040000;
@@ -223,8 +367,11 @@ public final class R {
     public static final int common_google_signin_btn_tint=0x7f04000e;
     public static final int notification_action_color_filter=0x7f04000f;
     public static final int notification_icon_bg_color=0x7f040010;
-    public static final int vector_tint_color=0x7f040011;
-    public static final int vector_tint_theme_color=0x7f040012;
+    public static final int notification_material_background_media_default_color=0x7f040011;
+    public static final int primary_text_default_material_dark=0x7f040012;
+    public static final int secondary_text_default_material_dark=0x7f040013;
+    public static final int vector_tint_color=0x7f040014;
+    public static final int vector_tint_theme_color=0x7f040015;
   }
   public static final class dimen {
     public static final int compat_button_inset_horizontal_material=0x7f050000;
@@ -234,21 +381,22 @@ public final class R {
     public static final int compat_control_corner_material=0x7f050004;
     public static final int compat_notification_large_icon_max_height=0x7f050005;
     public static final int compat_notification_large_icon_max_width=0x7f050006;
-    public static final int notification_action_icon_size=0x7f050007;
-    public static final int notification_action_text_size=0x7f050008;
-    public static final int notification_big_circle_margin=0x7f050009;
-    public static final int notification_content_margin_start=0x7f05000a;
-    public static final int notification_large_icon_height=0x7f05000b;
-    public static final int notification_large_icon_width=0x7f05000c;
-    public static final int notification_main_column_padding_top=0x7f05000d;
-    public static final int notification_media_narrow_margin=0x7f05000e;
-    public static final int notification_right_icon_size=0x7f05000f;
-    public static final int notification_right_side_padding_top=0x7f050010;
-    public static final int notification_small_icon_background_padding=0x7f050011;
-    public static final int notification_small_icon_size_as_large=0x7f050012;
-    public static final int notification_subtext_size=0x7f050013;
-    public static final int notification_top_pad=0x7f050014;
-    public static final int notification_top_pad_large_text=0x7f050015;
+    public static final int def_drawer_elevation=0x7f050007;
+    public static final int notification_action_icon_size=0x7f050008;
+    public static final int notification_action_text_size=0x7f050009;
+    public static final int notification_big_circle_margin=0x7f05000a;
+    public static final int notification_content_margin_start=0x7f05000b;
+    public static final int notification_large_icon_height=0x7f05000c;
+    public static final int notification_large_icon_width=0x7f05000d;
+    public static final int notification_main_column_padding_top=0x7f05000e;
+    public static final int notification_media_narrow_margin=0x7f05000f;
+    public static final int notification_right_icon_size=0x7f050010;
+    public static final int notification_right_side_padding_top=0x7f050011;
+    public static final int notification_small_icon_background_padding=0x7f050012;
+    public static final int notification_small_icon_size_as_large=0x7f050013;
+    public static final int notification_subtext_size=0x7f050014;
+    public static final int notification_top_pad=0x7f050015;
+    public static final int notification_top_pad_large_text=0x7f050016;
   }
   public static final class drawable {
     public static final int common_full_open_on_phone=0x7f060000;
@@ -327,75 +475,97 @@ public final class R {
     public static final int accessibility_custom_action_7=0x7f07001e;
     public static final int accessibility_custom_action_8=0x7f07001f;
     public static final int accessibility_custom_action_9=0x7f070020;
-    public static final int action_container=0x7f070021;
-    public static final int action_divider=0x7f070022;
-    public static final int action_image=0x7f070023;
-    public static final int action_text=0x7f070024;
-    public static final int actions=0x7f070025;
-    public static final int adjust_height=0x7f070026;
-    public static final int adjust_width=0x7f070027;
-    public static final int androidx_compose_ui_view_composition_context=0x7f070028;
-    public static final int async=0x7f070029;
-    public static final int auto=0x7f07002a;
-    public static final int binding_reference=0x7f07002b;
-    public static final int blocking=0x7f07002c;
-    public static final int chronometer=0x7f07002d;
-    public static final int compose_view_saveable_id_tag=0x7f07002e;
-    public static final int consume_window_insets_tag=0x7f07002f;
-    public static final int dark=0x7f070030;
-    public static final int dialog_button=0x7f070031;
-    public static final int edit_text_id=0x7f070032;
-    public static final int forever=0x7f070033;
-    public static final int fragment_container_view_tag=0x7f070034;
-    public static final int hide_ime_id=0x7f070035;
-    public static final int hide_in_inspector_tag=0x7f070036;
-    public static final int icon=0x7f070037;
-    public static final int icon_group=0x7f070038;
-    public static final int icon_only=0x7f070039;
-    public static final int info=0x7f07003a;
-    public static final int inspection_slot_table_set=0x7f07003b;
-    public static final int italic=0x7f07003c;
-    public static final int light=0x7f07003d;
-    public static final int line1=0x7f07003e;
-    public static final int line3=0x7f07003f;
-    public static final int none=0x7f070040;
-    public static final int normal=0x7f070041;
-    public static final int notification_background=0x7f070042;
-    public static final int notification_main_column=0x7f070043;
-    public static final int notification_main_column_container=0x7f070044;
-    public static final int report_drawn=0x7f070045;
-    public static final int right_icon=0x7f070046;
-    public static final int right_side=0x7f070047;
-    public static final int special_effects_controller_view_tag=0x7f070048;
-    public static final int standard=0x7f070049;
-    public static final int tag_accessibility_actions=0x7f07004a;
-    public static final int tag_accessibility_clickable_spans=0x7f07004b;
-    public static final int tag_accessibility_heading=0x7f07004c;
-    public static final int tag_accessibility_pane_title=0x7f07004d;
-    public static final int tag_on_apply_window_listener=0x7f07004e;
-    public static final int tag_on_receive_content_listener=0x7f07004f;
-    public static final int tag_on_receive_content_mime_types=0x7f070050;
-    public static final int tag_screen_reader_focusable=0x7f070051;
-    public static final int tag_state_description=0x7f070052;
-    public static final int tag_transition_group=0x7f070053;
-    public static final int tag_unhandled_key_event_manager=0x7f070054;
-    public static final int tag_unhandled_key_listeners=0x7f070055;
-    public static final int tag_window_insets_animation_callback=0x7f070056;
-    public static final int text=0x7f070057;
-    public static final int text2=0x7f070058;
-    public static final int time=0x7f070059;
-    public static final int title=0x7f07005a;
-    public static final int view_tree_lifecycle_owner=0x7f07005b;
-    public static final int view_tree_on_back_pressed_dispatcher_owner=0x7f07005c;
-    public static final int view_tree_saved_state_registry_owner=0x7f07005d;
-    public static final int view_tree_view_model_store_owner=0x7f07005e;
-    public static final int visible_removing_fragment_view_tag=0x7f07005f;
-    public static final int wide=0x7f070060;
-    public static final int wrapped_composition_tag=0x7f070061;
+    public static final int action0=0x7f070021;
+    public static final int action_container=0x7f070022;
+    public static final int action_divider=0x7f070023;
+    public static final int action_image=0x7f070024;
+    public static final int action_text=0x7f070025;
+    public static final int actions=0x7f070026;
+    public static final int adjust_height=0x7f070027;
+    public static final int adjust_width=0x7f070028;
+    public static final int all=0x7f070029;
+    public static final int androidx_compose_ui_view_composition_context=0x7f07002a;
+    public static final int async=0x7f07002b;
+    public static final int auto=0x7f07002c;
+    public static final int binding_reference=0x7f07002d;
+    public static final int blocking=0x7f07002e;
+    public static final int bottom=0x7f07002f;
+    public static final int cancel_action=0x7f070030;
+    public static final int center=0x7f070031;
+    public static final int center_horizontal=0x7f070032;
+    public static final int center_vertical=0x7f070033;
+    public static final int chronometer=0x7f070034;
+    public static final int clip_horizontal=0x7f070035;
+    public static final int clip_vertical=0x7f070036;
+    public static final int compose_view_saveable_id_tag=0x7f070037;
+    public static final int consume_window_insets_tag=0x7f070038;
+    public static final int dark=0x7f070039;
+    public static final int dialog_button=0x7f07003a;
+    public static final int edit_text_id=0x7f07003b;
+    public static final int end=0x7f07003c;
+    public static final int end_padder=0x7f07003d;
+    public static final int fill=0x7f07003e;
+    public static final int fill_horizontal=0x7f07003f;
+    public static final int fill_vertical=0x7f070040;
+    public static final int forever=0x7f070041;
+    public static final int fragment_container_view_tag=0x7f070042;
+    public static final int hide_ime_id=0x7f070043;
+    public static final int hide_in_inspector_tag=0x7f070044;
+    public static final int icon=0x7f070045;
+    public static final int icon_group=0x7f070046;
+    public static final int icon_only=0x7f070047;
+    public static final int info=0x7f070048;
+    public static final int inspection_slot_table_set=0x7f070049;
+    public static final int italic=0x7f07004a;
+    public static final int left=0x7f07004b;
+    public static final int light=0x7f07004c;
+    public static final int line1=0x7f07004d;
+    public static final int line3=0x7f07004e;
+    public static final int media_actions=0x7f07004f;
+    public static final int media_controller_compat_view_tag=0x7f070050;
+    public static final int none=0x7f070051;
+    public static final int normal=0x7f070052;
+    public static final int notification_background=0x7f070053;
+    public static final int notification_main_column=0x7f070054;
+    public static final int notification_main_column_container=0x7f070055;
+    public static final int report_drawn=0x7f070056;
+    public static final int right=0x7f070057;
+    public static final int right_icon=0x7f070058;
+    public static final int right_side=0x7f070059;
+    public static final int special_effects_controller_view_tag=0x7f07005a;
+    public static final int standard=0x7f07005b;
+    public static final int start=0x7f07005c;
+    public static final int status_bar_latest_event_content=0x7f07005d;
+    public static final int tag_accessibility_actions=0x7f07005e;
+    public static final int tag_accessibility_clickable_spans=0x7f07005f;
+    public static final int tag_accessibility_heading=0x7f070060;
+    public static final int tag_accessibility_pane_title=0x7f070061;
+    public static final int tag_on_apply_window_listener=0x7f070062;
+    public static final int tag_on_receive_content_listener=0x7f070063;
+    public static final int tag_on_receive_content_mime_types=0x7f070064;
+    public static final int tag_screen_reader_focusable=0x7f070065;
+    public static final int tag_state_description=0x7f070066;
+    public static final int tag_transition_group=0x7f070067;
+    public static final int tag_unhandled_key_event_manager=0x7f070068;
+    public static final int tag_unhandled_key_listeners=0x7f070069;
+    public static final int tag_window_insets_animation_callback=0x7f07006a;
+    public static final int text=0x7f07006b;
+    public static final int text2=0x7f07006c;
+    public static final int time=0x7f07006d;
+    public static final int title=0x7f07006e;
+    public static final int top=0x7f07006f;
+    public static final int view_tree_lifecycle_owner=0x7f070070;
+    public static final int view_tree_on_back_pressed_dispatcher_owner=0x7f070071;
+    public static final int view_tree_saved_state_registry_owner=0x7f070072;
+    public static final int view_tree_view_model_store_owner=0x7f070073;
+    public static final int visible_removing_fragment_view_tag=0x7f070074;
+    public static final int wide=0x7f070075;
+    public static final int wrapped_composition_tag=0x7f070076;
   }
   public static final class integer {
-    public static final int google_play_services_version=0x7f080000;
-    public static final int status_bar_notification_info_maxnum=0x7f080001;
+    public static final int cancel_button_image_alpha=0x7f080000;
+    public static final int google_play_services_version=0x7f080001;
+    public static final int status_bar_notification_info_maxnum=0x7f080002;
   }
   public static final class layout {
     public static final int custom_dialog=0x7f090000;
@@ -403,10 +573,19 @@ public final class R {
     public static final int ime_secondary_split_test_activity=0x7f090002;
     public static final int notification_action=0x7f090003;
     public static final int notification_action_tombstone=0x7f090004;
-    public static final int notification_template_custom_big=0x7f090005;
-    public static final int notification_template_icon_group=0x7f090006;
-    public static final int notification_template_part_chronometer=0x7f090007;
-    public static final int notification_template_part_time=0x7f090008;
+    public static final int notification_media_action=0x7f090005;
+    public static final int notification_media_cancel_action=0x7f090006;
+    public static final int notification_template_big_media=0x7f090007;
+    public static final int notification_template_big_media_custom=0x7f090008;
+    public static final int notification_template_big_media_narrow=0x7f090009;
+    public static final int notification_template_big_media_narrow_custom=0x7f09000a;
+    public static final int notification_template_custom_big=0x7f09000b;
+    public static final int notification_template_icon_group=0x7f09000c;
+    public static final int notification_template_lines_media=0x7f09000d;
+    public static final int notification_template_media=0x7f09000e;
+    public static final int notification_template_media_custom=0x7f09000f;
+    public static final int notification_template_part_chronometer=0x7f090010;
+    public static final int notification_template_part_time=0x7f090011;
   }
   public static final class string {
     public static final int androidx_startup=0x7f0a0000;
@@ -463,13 +642,19 @@ public final class R {
     public static final int LowerCaseMenu=0x7f0b0005;
     public static final int TextAppearance_Compat_Notification=0x7f0b0006;
     public static final int TextAppearance_Compat_Notification_Info=0x7f0b0007;
-    public static final int TextAppearance_Compat_Notification_Line2=0x7f0b0008;
-    public static final int TextAppearance_Compat_Notification_Time=0x7f0b0009;
-    public static final int TextAppearance_Compat_Notification_Title=0x7f0b000a;
-    public static final int WhiteBackgroundDialogTheme=0x7f0b000b;
-    public static final int WhiteBackgroundTheme=0x7f0b000c;
-    public static final int Widget_Compat_NotificationActionContainer=0x7f0b000d;
-    public static final int Widget_Compat_NotificationActionText=0x7f0b000e;
+    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f0b0008;
+    public static final int TextAppearance_Compat_Notification_Line2=0x7f0b0009;
+    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0b000a;
+    public static final int TextAppearance_Compat_Notification_Media=0x7f0b000b;
+    public static final int TextAppearance_Compat_Notification_Time=0x7f0b000c;
+    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f0b000d;
+    public static final int TextAppearance_Compat_Notification_Title=0x7f0b000e;
+    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0b000f;
+    public static final int WhiteBackgroundDialogTheme=0x7f0b0010;
+    public static final int WhiteBackgroundTheme=0x7f0b0011;
+    public static final int Widget_Compat_NotificationActionContainer=0x7f0b0012;
+    public static final int Widget_Compat_NotificationActionText=0x7f0b0013;
+    public static final int Widget_Support_CoordinatorLayout=0x7f0b0014;
   }
   public static final class styleable {
     /**
@@ -486,7 +671,7 @@ public final class R {
      * @see #Capability_shortcutMatchRequired
      */
     public static final int[] Capability={
-      0x7f030013, 0x7f030015
+      0x7f03001d, 0x7f03001f
     };
     /**
      * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#queryPatterns}
@@ -531,7 +716,7 @@ public final class R {
      */
     public static final int[] ColorStateListItem={
       0x010101a5, 0x0101031f, 0x01010647, 0x7f030000, 
-      0x7f030011
+      0x7f030015
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#color}
@@ -581,6 +766,264 @@ public final class R {
      */
     public static final int ColorStateListItem_lStar=4;
     /**
+     * Attributes that can be used with a CoordinatorLayout.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_keylines b4a.bitdesing.tomapedidos:keylines}</code></td><td>A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground b4a.bitdesing.tomapedidos:statusBarBackground}</code></td><td>Drawable to display behind the status bar when the view is set to draw behind it.</td></tr>
+     * </table>
+     * @see #CoordinatorLayout_keylines
+     * @see #CoordinatorLayout_statusBarBackground
+     */
+    public static final int[] CoordinatorLayout={
+      0x7f030014, 0x7f030020
+    };
+    /**
+     * <p>
+     * @attr description
+     * A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.
+     * Child views can refer to these keylines for alignment using
+     * layout_keyline="index" where index is a 0-based index into
+     * this array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name b4a.bitdesing.tomapedidos:keylines
+     */
+    public static final int CoordinatorLayout_keylines=0;
+    /**
+     * <p>
+     * @attr description
+     * Drawable to display behind the status bar when the view is set to draw behind it.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name b4a.bitdesing.tomapedidos:statusBarBackground
+     */
+    public static final int CoordinatorLayout_statusBarBackground=1;
+    /**
+     * Attributes that can be used with a CoordinatorLayout_Layout.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor b4a.bitdesing.tomapedidos:layout_anchor}</code></td><td>The id of an anchor view that this view should position relative to.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity b4a.bitdesing.tomapedidos:layout_anchorGravity}</code></td><td>Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior b4a.bitdesing.tomapedidos:layout_behavior}</code></td><td>The class name of a Behavior class defining special runtime behavior
+     * for this child view.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges b4a.bitdesing.tomapedidos:layout_dodgeInsetEdges}</code></td><td>Specifies how this view dodges the inset edges of the CoordinatorLayout.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge b4a.bitdesing.tomapedidos:layout_insetEdge}</code></td><td>Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline b4a.bitdesing.tomapedidos:layout_keyline}</code></td><td>The index of a keyline this view should position relative to.</td></tr>
+     * </table>
+     * @see #CoordinatorLayout_Layout_android_layout_gravity
+     * @see #CoordinatorLayout_Layout_layout_anchor
+     * @see #CoordinatorLayout_Layout_layout_anchorGravity
+     * @see #CoordinatorLayout_Layout_layout_behavior
+     * @see #CoordinatorLayout_Layout_layout_dodgeInsetEdges
+     * @see #CoordinatorLayout_Layout_layout_insetEdge
+     * @see #CoordinatorLayout_Layout_layout_keyline
+     */
+    public static final int[] CoordinatorLayout_Layout={
+      0x010100b3, 0x7f030016, 0x7f030017, 0x7f030018, 
+      0x7f030019, 0x7f03001a, 0x7f03001b
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:layout_gravity
+     */
+    public static final int CoordinatorLayout_Layout_android_layout_gravity=0;
+    /**
+     * <p>
+     * @attr description
+     * The id of an anchor view that this view should position relative to.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name b4a.bitdesing.tomapedidos:layout_anchor
+     */
+    public static final int CoordinatorLayout_Layout_layout_anchor=1;
+    /**
+     * <p>
+     * @attr description
+     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the horizontal gravity: a left gravity will clip the right
+     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
+     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * </table>
+     *
+     * @attr name b4a.bitdesing.tomapedidos:layout_anchorGravity
+     */
+    public static final int CoordinatorLayout_Layout_layout_anchorGravity=2;
+    /**
+     * <p>
+     * @attr description
+     * The class name of a Behavior class defining special runtime behavior
+     * for this child view.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name b4a.bitdesing.tomapedidos:layout_behavior
+     */
+    public static final int CoordinatorLayout_Layout_layout_behavior=3;
+    /**
+     * <p>
+     * @attr description
+     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
+     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
+     * </table>
+     *
+     * @attr name b4a.bitdesing.tomapedidos:layout_dodgeInsetEdges
+     */
+    public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges=4;
+    /**
+     * <p>
+     * @attr description
+     * Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
+     * </table>
+     *
+     * @attr name b4a.bitdesing.tomapedidos:layout_insetEdge
+     */
+    public static final int CoordinatorLayout_Layout_layout_insetEdge=5;
+    /**
+     * <p>
+     * @attr description
+     * The index of a keyline this view should position relative to.
+     * android:layout_gravity will affect how the view aligns to the
+     * specified keyline.
+     *
+     * <p>May be an integer value, such as "<code>100</code>".
+     *
+     * @attr name b4a.bitdesing.tomapedidos:layout_keyline
+     */
+    public static final int CoordinatorLayout_Layout_layout_keyline=6;
+    /**
+     * Attributes that can be used with a DrawerLayout.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #DrawerLayout_elevation b4a.bitdesing.tomapedidos:elevation}</code></td><td></td></tr>
+     * </table>
+     * @see #DrawerLayout_elevation
+     */
+    public static final int[] DrawerLayout={
+      0x7f030006
+    };
+    /**
+     * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#elevation}
+     * attribute's value can be found in the {@link #DrawerLayout} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name b4a.bitdesing.tomapedidos:elevation
+     */
+    public static final int DrawerLayout_elevation=0;
+    /**
      * Attributes that can be used with a FontFamily.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -604,8 +1047,8 @@ public final class R {
      * @see #FontFamily_fontProviderSystemFontFamily
      */
     public static final int[] FontFamily={
-      0x7f030005, 0x7f030006, 0x7f030007, 0x7f030008, 
-      0x7f030009, 0x7f03000a, 0x7f03000b
+      0x7f030008, 0x7f030009, 0x7f03000a, 0x7f03000b, 
+      0x7f03000c, 0x7f03000d, 0x7f03000e
     };
     /**
      * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#fontProviderAuthority}
@@ -733,8 +1176,8 @@ public final class R {
      */
     public static final int[] FontFamilyFont={
       0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
-      0x01010570, 0x7f030004, 0x7f03000c, 0x7f03000d, 
-      0x7f03000e, 0x7f030016
+      0x01010570, 0x7f030007, 0x7f03000f, 0x7f030010, 
+      0x7f030011, 0x7f030022
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -1176,7 +1619,7 @@ public final class R {
      * @see #LoadingImageView_imageAspectRatioAdjust
      */
     public static final int[] LoadingImageView={
-      0x7f030002, 0x7f03000f, 0x7f030010
+      0x7f030002, 0x7f030012, 0x7f030013
     };
     /**
      * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#circleCrop}
@@ -1231,7 +1674,7 @@ public final class R {
      * @see #SignInButton_scopeUris
      */
     public static final int[] SignInButton={
-      0x7f030001, 0x7f030003, 0x7f030014
+      0x7f030001, 0x7f030003, 0x7f03001e
     };
     /**
      * <p>This symbol is the offset where the {@link b4a.bitdesing.tomapedidos.R.attr#buttonSize}
@@ -1291,6 +1734,32 @@ public final class R {
      * @attr name b4a.bitdesing.tomapedidos:scopeUris
      */
     public static final int SignInButton_scopeUris=2;
+    /**
+     * Attributes that can be used with a SwipeRefreshLayout.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor b4a.bitdesing.tomapedidos:swipeRefreshLayoutProgressSpinnerBackgroundColor}</code></td><td>Background color for SwipeRefreshLayout progress spinner.</td></tr>
+     * </table>
+     * @see #SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor
+     */
+    public static final int[] SwipeRefreshLayout={
+      0x7f030021
+    };
+    /**
+     * <p>
+     * @attr description
+     * Background color for SwipeRefreshLayout progress spinner.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name b4a.bitdesing.tomapedidos:swipeRefreshLayoutProgressSpinnerBackgroundColor
+     */
+    public static final int SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor=0;
   }
   public static final class xml {
     public static final int provider_paths=0x7f0d0000;

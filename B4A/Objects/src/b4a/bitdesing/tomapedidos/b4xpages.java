@@ -18,6 +18,7 @@ public b4a.example.dateutils _dateutils = null;
 public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public static b4a.bitdesing.tomapedidos.b4xpagesmanager._b4amenuitem  _addmenuitem(anywheresoftware.b4a.BA _ba,Object _b4xpage,Object _title) throws Exception{
  //BA.debugLineNum = 91;BA.debugLine="Public Sub AddMenuItem(B4XPage As Object, Title As";

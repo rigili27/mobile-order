@@ -2,8 +2,8 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="b4a.bitdesing.tomapedidos"
-	android:versionCode="1"
-	android:versionName="1.0.2-beta"
+	android:versionCode="5"
+	android:versionName="1.0.5-beta"
 	android:installLocation="internalOnly">
 	
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
@@ -16,10 +16,13 @@
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+	<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<application
 		android:name="androidx.multidex.MultiDexApplication"
 		android:icon="@drawable/icon"
 		android:label="Toma Pedidos"
+		android:usesCleartextTraffic="true"
 		android:theme="@style/LightTheme"
 		android:requestLegacyExternalStorage="true">
 		
@@ -60,6 +63,10 @@
 		</service>
 		<receiver
 			android:name=".starter$starter_BR"
+			android:exported="true">
+		</receiver>
+		<receiver
+			android:name=".httputils2service"
 			android:exported="true">
 		</receiver>
 	</application>

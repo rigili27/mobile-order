@@ -40,6 +40,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 40;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
@@ -263,7 +264,7 @@ _imageviewheight = (float) (_mbitmap.getHeight());
  break; }
 default: {
  //BA.debugLineNum = 104;BA.debugLine="Log(\"Invalid resize mode: \"  & mResizeMode)";
-__c.LogImpl("925624603","Invalid resize mode: "+_mresizemode,0);
+__c.LogImpl("937748763","Invalid resize mode: "+_mresizemode,0);
  break; }
 }
 ;

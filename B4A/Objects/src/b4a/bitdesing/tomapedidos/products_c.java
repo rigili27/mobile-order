@@ -46,6 +46,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public static class _productsdata{
 public boolean IsInitialized;
@@ -240,7 +241,7 @@ _root = _root1;
  //BA.debugLineNum = 45;BA.debugLine="Root.LoadLayout(\"products_layout\")";
 _root.LoadLayout("products_layout",ba);
  //BA.debugLineNum = 46;BA.debugLine="Log(\"create products page\")";
-__c.LogImpl("12818051","create products page",0);
+__c.LogImpl("02555907","create products page",0);
  //BA.debugLineNum = 49;BA.debugLine="B4XPages.SetTitle(Me, \"Productos\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Productos"));
  //BA.debugLineNum = 50;BA.debugLine="B4XPages.AddMenuItem(Me, \"Escanear\")";

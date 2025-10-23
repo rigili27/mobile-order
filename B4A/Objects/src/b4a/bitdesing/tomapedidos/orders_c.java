@@ -38,6 +38,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public static class _ordersdata{
 public boolean IsInitialized;
@@ -83,7 +84,7 @@ _root = _root1;
  //BA.debugLineNum = 28;BA.debugLine="Root.LoadLayout(\"orders_layout\")";
 _root.LoadLayout("orders_layout",ba);
  //BA.debugLineNum = 29;BA.debugLine="Log(\"create orders page\")";
-__c.LogImpl("145875203","create orders page",0);
+__c.LogImpl("04718595","create orders page",0);
  //BA.debugLineNum = 31;BA.debugLine="B4XPages.SetTitle(Me, \"Pedidos\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Pedidos"));
  //BA.debugLineNum = 32;BA.debugLine="Dim addOrder As B4AMenuItem = B4XPages.AddMenuIte";
@@ -199,7 +200,7 @@ case 3:
 //C
 this.state = 6;
  //BA.debugLineNum = 144;BA.debugLine="Log(\"El usuario eligió Sí.\")";
-parent.__c.LogImpl("146268424","El usuario eligió Sí.",0);
+parent.__c.LogImpl("05111816","El usuario eligió Sí.",0);
  //BA.debugLineNum = 145;BA.debugLine="sql.Initialize(Starter.Route, Starter.DataBase,";
 parent._sql.Initialize(parent._starter._route /*String*/ ,parent._starter._database /*String*/ ,parent.__c.True);
  //BA.debugLineNum = 147;BA.debugLine="sql.ExecNonQuery(\"DELETE FROM PedCMovil WHERE ID";
@@ -212,7 +213,7 @@ case 5:
 //C
 this.state = 6;
  //BA.debugLineNum = 152;BA.debugLine="Log(\"El usuario eligió No.\")";
-parent.__c.LogImpl("146268432","El usuario eligió No.",0);
+parent.__c.LogImpl("05111824","El usuario eligió No.",0);
  if (true) break;
 
 case 6:

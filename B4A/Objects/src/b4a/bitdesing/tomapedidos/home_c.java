@@ -34,6 +34,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public String  _b4xpage_appear() throws Exception{
  //BA.debugLineNum = 87;BA.debugLine="Sub B4XPage_Appear";
@@ -51,7 +52,7 @@ _root = _root1;
  //BA.debugLineNum = 19;BA.debugLine="Root.LoadLayout(\"home_layout\")";
 _root.LoadLayout("home_layout",ba);
  //BA.debugLineNum = 20;BA.debugLine="Log(\"create home page\")";
-__c.LogImpl("12162691","create home page",0);
+__c.LogImpl("01900547","create home page",0);
  //BA.debugLineNum = 23;BA.debugLine="B4XPages.SetTitle(Me, \"Escritorio\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Escritorio"));
  //BA.debugLineNum = 24;BA.debugLine="B4XPages.AddMenuItem(Me, \"Cerrar sesión\")";

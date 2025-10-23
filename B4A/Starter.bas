@@ -123,6 +123,7 @@ Public Sub SelectBusiness() As BusinessData
 		Do While rs.NextRow
 			Dim BD As BusinessData
 			BD.RAZONSOCIAL = rs.GetString("RAZONSOCIAL")
+			BD.NRCUIT = rs.GetString("NROCUIT")
 			BD.FTP = rs.GetString("FTP")
 		Loop
 	End If
@@ -151,7 +152,7 @@ Sub ShareDataBase
 	Dim i As Intent
 	i.Initialize("android.intent.action.SEND_MULTIPLE", "")
 	i.SetType("text/plain")
- 
+	
 	Dim Uris As List
 	Uris.Initialize
  
@@ -196,3 +197,8 @@ Sub ResetUserFontScale(p As Panel)
 		End If
 	Next
 End Sub
+
+
+
+
+

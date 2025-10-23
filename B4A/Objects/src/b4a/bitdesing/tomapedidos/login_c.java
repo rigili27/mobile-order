@@ -37,6 +37,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public static class _sellerdata{
 public boolean IsInitialized;
@@ -87,7 +88,7 @@ _root = _root1;
  //BA.debugLineNum = 25;BA.debugLine="Root.LoadLayout(\"login_layout\")";
 _root.LoadLayout("login_layout",ba);
  //BA.debugLineNum = 26;BA.debugLine="Log(\"create login page\")";
-__c.LogImpl("11835011","create login page",0);
+__c.LogImpl("01572867","create login page",0);
  //BA.debugLineNum = 28;BA.debugLine="B4XPages.SetTitle(Me, \"Ingreso de usuarios\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Ingreso de usuarios"));
  //BA.debugLineNum = 30;BA.debugLine="txtPassword.TextField.Color = Colors.White";

@@ -37,6 +37,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public static class _camerainfoandid{
 public boolean IsInitialized;
@@ -118,7 +119,7 @@ case 5:
 //C
 this.state = 6;
  //BA.debugLineNum = 328;BA.debugLine="Log(\"AutoFocus error.\")";
-parent.__c.LogImpl("141549829","AutoFocus error.",0);
+parent.__c.LogImpl("010092549","AutoFocus error.",0);
  if (true) break;
 
 case 6:
@@ -678,7 +679,7 @@ _setfocusmode("continuous-picture");
 _setfocusmode("continuous-video");
  }else {
  //BA.debugLineNum = 290;BA.debugLine="Log(\"Continuous focus mode is not available\")";
-__c.LogImpl("141156615","Continuous focus mode is not available",0);
+__c.LogImpl("09699335","Continuous focus mode is not available",0);
  };
  //BA.debugLineNum = 292;BA.debugLine="End Sub";
 return "";

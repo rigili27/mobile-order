@@ -41,6 +41,8 @@ Sub Class_Globals
 	Public QuienRecibe As String
 	Public Firma As Bitmap
 	
+	Dim phone As Phone
+	
 	
 End Sub
 
@@ -60,6 +62,9 @@ Private Sub B4XPage_Created (Root1 As B4XView)
 	B4XPages.AddMenuItem(Me, "Recibe")
 	B4XPages.AddMenuItem(Me, "Comentarios")
 	B4XPages.AddMenuItem(Me, "Firma")
+	
+	B4XPages.AddMenuItem(Me, "Ver remito")
+	
 	Dim addItem As B4AMenuItem = B4XPages.AddMenuItem(Me, "Agregar")
 	addItem.AddToBar = True
 	
@@ -287,7 +292,12 @@ Sub b4xpage_MenuClick (Tag As String)
 			B4XPage_Appear
 			b4xpage_MenuClick("Firma")
 		End If
-				
+	
+	' En el Sub b4xpage_MenuClick
+	Else If Tag = "Ver remito" Then
+		' Usa el ID del pedido actual
+		CreateRemitoPDF(Order.ID)
+
 	End If
 End Sub
 
@@ -351,4 +361,272 @@ End Sub
 
 Private Sub btnAddProduct_Click
 	b4xpage_MenuClick("Agregar")
+End Sub
+
+
+
+'   pdf
+
+
+
+
+Sub CreateRemitoPDF(id As Int)
+	Dim pdf As PdfDocument
+	pdf.Initialize
+
+	' Define el tamaño de la página (A4: 595 x 842 puntos)
+	Dim pageWidth As Int = 595
+	Dim pageHeight As Int = 842
+
+	pdf.StartPage(pageWidth, pageHeight) ' A4
+	
+	Dim orderHeader As OrdersData = GetOrderHeader(id)
+	Dim orderItems As List = GetOrderItems(id)
+
+	' Variables para la posición y estilo
+	Dim yPosition As Int = 50
+	Dim xMargin As Int = 40
+	Dim lineSpace As Int = 20
+	Dim fontSize As Float
+	
+	If Starter.access.GetUserFontScale < 1 Then
+		fontSize = 8
+	else If Starter.access.GetUserFontScale > 1 And Starter.access.GetUserFontScale < 1.25  Then
+		fontSize = 6
+	else If Starter.access.GetUserFontScale > 1.25 Then
+		fontSize = 5.2
+	else if Starter.access.GetUserFontScale = 1 Then
+		fontSize = 7
+	End If
+	
+'	Log(Starter.access.GetUserFontScale)
+'	Log(fontSize)
+'	Log(fontSize - 7)
+	
+	' --- ENCABEZADO DEL REMITO ---
+	
+	pdf.canvas.DrawText("" & Starter.SelectBusiness.RAZONSOCIAL, xMargin, yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+	yPosition = yPosition + lineSpace
+	
+	pdf.canvas.DrawText("CUIT: " & Starter.SelectBusiness.NRCUIT, xMargin, yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+	yPosition = yPosition + lineSpace * 2
+	
+	pdf.canvas.DrawText("REMITO NRO: " & orderHeader.ID, xMargin, yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+	yPosition = yPosition + lineSpace
+	
+	pdf.canvas.DrawText("Cliente: " & orderHeader.Customer & " (Cód: " & orderHeader.CODCLIENTE & ")", xMargin, yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+	yPosition = yPosition + lineSpace
+	
+	DateTime.DateFormat = "dd/MM/yyyy"
+	pdf.Canvas.DrawText("Fecha: " & DateTime.Date(orderHeader.FECHA), xMargin, yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+
+	pdf.canvas.DrawText("Vendedor: " & Starter.Seller.NOMBRE, pageWidth / 2, yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+	yPosition = yPosition + lineSpace
+	
+	pdf.canvas.DrawLine(xMargin, yPosition, pageWidth - xMargin, yPosition, Colors.Gray, 1)
+	yPosition = yPosition + lineSpace
+	
+	' --- DETALLE DE ITEMS (Tabla) ---
+	Dim colWidths() As Int = Array As Int(30, 290, 90, 40, 90)
+	Dim colPositions(colWidths.Length) As Int
+	
+	Dim currentX As Int = xMargin
+	For i = 0 To colWidths.Length - 1
+		colPositions(i) = currentX
+		currentX = currentX + colWidths(i)
+	Next
+	
+	Dim headers() As String = Array As String("Cant.", "Producto", "Precio Un.", "% Dto", "Subtotal")
+	
+	For i = 0 To headers.Length - 1
+		pdf.canvas.DrawText(headers(i), colPositions(i), yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+	Next
+	
+	yPosition = yPosition + lineSpace / 2
+	pdf.canvas.DrawLine(xMargin, yPosition, pageWidth - xMargin, yPosition, Colors.Gray, 1)
+	yPosition = yPosition + lineSpace
+	
+'	Log(pageHeight - 200)
+	
+	
+	For Each item As ItemsData In orderItems
+'		Log(yPosition)
+		If yPosition > pageHeight - 200 Then ' Salto de página si es necesario
+			pdf.FinishPage
+			pdf.StartPage(pageWidth, pageHeight) ' A4
+			yPosition = 50
+			
+			pdf.canvas.DrawLine(xMargin, yPosition, pageWidth - xMargin, yPosition, Colors.Gray, 1)
+			yPosition = yPosition + lineSpace
+			
+			For i = 0 To headers.Length - 1
+				pdf.canvas.DrawText(headers(i), colPositions(i), yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+			Next
+			
+			yPosition = yPosition + lineSpace / 2
+			pdf.canvas.DrawLine(xMargin, yPosition, pageWidth - xMargin, yPosition, Colors.Gray, 1)
+			yPosition = yPosition + lineSpace
+		End If
+		
+		pdf.canvas.DrawText(item.CANTIDAD, colPositions(0), yPosition, Typeface.DEFAULT, fontSize, Colors.Black, "LEFT")
+		pdf.canvas.DrawText(item.ProductName, colPositions(1), yPosition, Typeface.DEFAULT, fontSize, Colors.Black, "LEFT")
+		pdf.canvas.DrawText("$ " & NumberFormat2(item.PRECIO, 1, 2, 2, False), colPositions(2), yPosition, Typeface.DEFAULT, fontSize, Colors.Black, "LEFT")
+		pdf.canvas.DrawText(item.PORDTO & " %", colPositions(3), yPosition, Typeface.DEFAULT, fontSize, Colors.Black, "LEFT")
+		pdf.canvas.DrawText("$ " & NumberFormat2(item.IMPORTE, 1, 2, 2, False), colPositions(4), yPosition, Typeface.DEFAULT, fontSize, Colors.Black, "LEFT")
+		yPosition = yPosition + lineSpace
+		
+	Next
+	
+	pdf.canvas.DrawLine(xMargin, yPosition, pageWidth - xMargin, yPosition, Colors.Black, 1)
+	yPosition = yPosition + lineSpace
+	
+	
+	' --- RESUMEN Y PIE DE PÁGINA ---
+	
+	pdf.canvas.DrawText("Total Pedido:", colPositions(2) + 20, yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+	
+	pdf.canvas.DrawText("$ " & NumberFormat2(orderHeader.TotalOrder, 1, 2, 2, False), colPositions(3) + 20, yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+	yPosition = yPosition + lineSpace * 2
+	
+	
+	If yPosition > pageHeight - 300 Then ' Salto de página si es necesario
+		pdf.FinishPage
+		pdf.StartPage(pageWidth, pageHeight) ' A4
+		yPosition = 50
+	End If
+	
+	pdf.canvas.DrawText("Comentarios Generales:", xMargin, yPosition, Typeface.DEFAULT_BOLD, fontSize, Colors.Black, "LEFT")
+	yPosition = yPosition + lineSpace
+	pdf.canvas.DrawText(orderHeader.COMENTARIOS, xMargin, yPosition, Typeface.DEFAULT, fontSize, Colors.Black, "LEFT")
+'	yPosition = yPosition + lineSpace * 2
+	
+'	pdf.canvas.DrawText("Recibe: " & orderHeader.QUIENRECIBIO, xMargin, yPosition, Typeface.DEFAULT, fontSize, Colors.Black, "LEFT")
+'	yPosition = yPosition + lineSpace * 2
+	
+	' Firma
+	If orderHeader.FIRMA.IsInitialized Then
+		Dim bmp As Bitmap = orderHeader.FIRMA
+		
+		Dim rectFirma As Rect
+		rectFirma.Initialize(pageWidth - 200, yPosition, pageWidth - xMargin - 10, yPosition + 70)
+		pdf.canvas.DrawBitmap(bmp, Null, rectFirma)
+		pdf.canvas.DrawLine(pageWidth - 200, yPosition + 75, pageWidth - xMargin, yPosition + 75, Colors.Black, 1)
+		pdf.canvas.DrawText(orderHeader.QUIENRECIBIO, pageWidth - 150, yPosition + 90, Typeface.DEFAULT, fontSize, Colors.Black, "LEFT")
+	End If
+	
+	
+	pdf.FinishPage
+
+	Dim filename As String = "Remito_" & id & ".pdf"
+	Dim out As OutputStream = File.OpenOutput(Starter.Provider.SharedFolder, filename, False)
+	pdf.WriteToStream(out)
+	out.Close
+	pdf.Close
+
+'	Log("PDF creado: " & File.Combine(Starter.Provider.SharedFolder, filename))
+
+	Dim intento As Intent
+	Dim uri As Object
+
+	If phone.SdkVersion >= 24 Then
+		' Android 7 o superior: usar FileProvider
+		uri = Starter.Provider.GetFileUri(filename)
+		intento.Initialize(intento.ACTION_VIEW, uri)
+		intento.Flags = Bit.Or(intento.Flags, 1)
+		intento.SetType("application/pdf")
+	Else
+		' Android 6 o anterior: usar file://
+		intento.Initialize(intento.ACTION_VIEW, "file://" & File.Combine(Starter.Provider.SharedFolder, filename))
+		intento.SetType("application/pdf")
+	End If
+
+	Try
+		StartActivity(intento)
+	Catch
+		ToastMessageShow("No hay aplicación para abrir PDF.", True)
+	End Try
+End Sub
+
+
+Private Sub GetOrderHeader(OrderId As Int) As OrdersData
+	Dim OD As OrdersData
+	OD.Initialize
+    
+	sql.Initialize(Starter.Route, Starter.DataBase, True)
+	rs = sql.ExecQuery("SELECT * FROM PedCMovil WHERE (ID = " & OrderId & ")")
+	If rs.RowCount > 0 Then
+		Do While rs.NextRow
+            
+			OD.ID = rs.GetString("ID")
+			OD.CODCLIENTE = rs.GetString("CODCLIENTE")
+			OD.Customer = ftxtCustomerName.Text ' Usar el valor del campo que ya está cargado
+            
+			OD.CODVENDEDOR = rs.GetString("CODVENDEDOR")
+			OD.FECHA = rs.GetString("FECHA")
+			OD.COMENTARIOS = rs.GetString("COMENTARIOS")
+            
+			' Manejo de la Firma
+			Dim Buffer() As Byte
+			Buffer = rs.GetBlob("FIRMA")
+			If Buffer = Null Then
+				OD.FIRMA = Null
+			Else
+				Dim InputStream1 As InputStream
+				InputStream1.InitializeFromBytesArray(Buffer, 0, Buffer.Length)
+                
+				' El campo FIRMA en OrdersData es B4XBitmap (por tu declaración de Sub Class_Globals)
+				' Inicializamos el B4XBitmap con el InputStream
+				OD.FIRMA.Initialize2(InputStream1)
+				InputStream1.Close
+			End If
+            
+			OD.NROPEDIDO = rs.GetString("NROPEDIDO")
+			OD.QUIENRECIBIO = rs.GetString("QUIENRECIBIO")
+            
+			' Calcular Total (usando la consulta a PedDMovil)
+			Dim totalResult As String = sql.ExecQuerySingleResult("SELECT sum(IMPORTE) FROM PedDMovil WHERE IDPEDIDO=" & OrderId)
+			If totalResult = Null Or totalResult = "" Then totalResult = "0"
+			OD.TotalOrder = totalResult
+            
+		Loop
+	End If
+	rs.Close
+    
+	Return OD
+End Sub
+
+Private Sub GetOrderItems(OrderId As Int) As List
+	Dim itemsList As List
+	itemsList.Initialize
+    
+	sql.Initialize(Starter.Route, Starter.DataBase, True)
+	rs = sql.ExecQuery("SELECT * FROM PedDMovil WHERE (IDPEDIDO = " & OrderId & ")")
+    
+	If rs.RowCount > 0 Then
+		Do While rs.NextRow
+            
+			Dim ID As ItemsData
+			ID.Initialize
+			ID.ID = rs.GetString("ID")
+			ID.CODARTICULO = rs.GetString("CODARTICULO")
+			ID.ProductName = Starter.SelectProduct(ID.CODARTICULO).DESCRIPCION
+			ID.CANTIDAD = rs.GetString("CANTIDAD")
+			ID.PRECIO = rs.GetString("PRECIO")
+			ID.IMPORTE = rs.GetString("IMPORTE")
+			ID.PORDTO = rs.GetString("PORDTO")
+            
+			' Asegúrate de que el campo COMENTARIO exista en tu tabla PedDMovil
+			Try
+				ID.COMENTARIO = rs.GetString("COMENTARIO")
+			Catch
+				ID.COMENTARIO = ""
+			End Try
+            
+			itemsList.Add(ID)
+            
+		Loop
+	End If
+	rs.Close
+    
+	Return itemsList
 End Sub

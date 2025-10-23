@@ -47,6 +47,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public String  _additemstolist(anywheresoftware.b4a.objects.collections.List _li,String _full) throws Exception{
 int _i = 0;
@@ -382,7 +383,7 @@ _count = (int) (_count+1);
  }
 };
  //BA.debugLineNum = 227;BA.debugLine="Log(\"Index time: \" & (DateTime.Now - startTime) &";
-__c.LogImpl("932047135","Index time: "+BA.NumberToString((__c.DateTime.getNow()-_starttime))+" ms ("+BA.NumberToString(_items.getSize())+" Items)",0);
+__c.LogImpl("944171295","Index time: "+BA.NumberToString((__c.DateTime.getNow()-_starttime))+" ms ("+BA.NumberToString(_items.getSize())+" Items)",0);
  //BA.debugLineNum = 228;BA.debugLine="AllItems = Items";
 _allitems = _items;
  //BA.debugLineNum = 229;BA.debugLine="Return Array(prefixList, substringList, AllItems)";

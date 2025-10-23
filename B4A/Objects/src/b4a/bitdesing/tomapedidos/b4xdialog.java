@@ -58,6 +58,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public String  _background_click() throws Exception{
  //BA.debugLineNum = 261;BA.debugLine="Private Sub Background_Click";
@@ -723,7 +724,7 @@ case 17:
 //C
 this.state = 18;
  //BA.debugLineNum = 121;BA.debugLine="Log(\"Warning: dialog shown with zero sized paren";
-parent.__c.LogImpl("921954584","Warning: dialog shown with zero sized parent.",0);
+parent.__c.LogImpl("934078744","Warning: dialog shown with zero sized parent.",0);
  if (true) break;
 
 case 18:

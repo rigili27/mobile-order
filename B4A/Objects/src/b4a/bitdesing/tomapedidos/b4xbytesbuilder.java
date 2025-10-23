@@ -31,6 +31,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public b4a.bitdesing.tomapedidos.b4xbytesbuilder  _append(byte[] _data) throws Exception{
  //BA.debugLineNum = 24;BA.debugLine="Public Sub Append(Data() As Byte) As B4XBytesBuild";
@@ -170,7 +171,7 @@ byte[] _afterindex = null;
 if (_index>=_mlength) { 
  //BA.debugLineNum = 45;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 if (_index>_mlength) { 
-__c.LogImpl("96619138","Index too large",0);};
+__c.LogImpl("916252930","Index too large",0);};
  //BA.debugLineNum = 46;BA.debugLine="Append(Data)";
 _append(_data);
  }else {
@@ -212,7 +213,7 @@ public String  _set(int _index,byte[] _data) throws Exception{
 if (_index>=_mlength) { 
  //BA.debugLineNum = 58;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 if (_index>_mlength) { 
-__c.LogImpl("96684674","Index too large",0);};
+__c.LogImpl("916318466","Index too large",0);};
  //BA.debugLineNum = 59;BA.debugLine="Append(Data)";
 _append(_data);
  }else {

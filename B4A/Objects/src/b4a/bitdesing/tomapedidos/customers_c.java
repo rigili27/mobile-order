@@ -38,6 +38,7 @@ public b4a.bitdesing.tomapedidos.main _main = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 public static class _customersdata{
 public boolean IsInitialized;
@@ -80,7 +81,7 @@ _root = _root1;
  //BA.debugLineNum = 28;BA.debugLine="Root.LoadLayout(\"customers_layout\")";
 _root.LoadLayout("customers_layout",ba);
  //BA.debugLineNum = 29;BA.debugLine="Log(\"create customers page\")";
-__c.LogImpl("13604483","create customers page",0);
+__c.LogImpl("03342339","create customers page",0);
  //BA.debugLineNum = 31;BA.debugLine="B4XPages.SetTitle(Me, \"Clientes\")";
 _b4xpages._settitle /*String*/ (ba,this,(Object)("Clientes"));
  //BA.debugLineNum = 33;BA.debugLine="End Sub";

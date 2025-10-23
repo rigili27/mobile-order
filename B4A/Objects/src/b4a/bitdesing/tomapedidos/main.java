@@ -341,6 +341,7 @@ public b4a.example.dateutils _dateutils = null;
 public b4a.bitdesing.tomapedidos.starter _starter = null;
 public b4a.bitdesing.tomapedidos.b4xpages _b4xpages = null;
 public b4a.bitdesing.tomapedidos.b4xcollections _b4xcollections = null;
+public b4a.bitdesing.tomapedidos.httputils2service _httputils2service = null;
 public b4a.bitdesing.tomapedidos.xuiviewsutils _xuiviewsutils = null;
 
 public static boolean isAnyActivityVisible() {
@@ -348,59 +349,59 @@ public static boolean isAnyActivityVisible() {
 vis = vis | (main.mostCurrent != null);
 return vis;}
 public static String  _activity_actionbarhomeclick() throws Exception{
- //BA.debugLineNum = 35;BA.debugLine="Sub Activity_ActionBarHomeClick";
- //BA.debugLineNum = 36;BA.debugLine="ActionBarHomeClicked = True";
+ //BA.debugLineNum = 36;BA.debugLine="Sub Activity_ActionBarHomeClick";
+ //BA.debugLineNum = 37;BA.debugLine="ActionBarHomeClicked = True";
 _actionbarhomeclicked = anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 37;BA.debugLine="B4XPages.Delegate.Activity_ActionBarHomeClick";
+ //BA.debugLineNum = 38;BA.debugLine="B4XPages.Delegate.Activity_ActionBarHomeClick";
 mostCurrent._b4xpages._delegate /*b4a.bitdesing.tomapedidos.b4xpagesdelegator*/ ._activity_actionbarhomeclick /*String*/ ();
- //BA.debugLineNum = 38;BA.debugLine="ActionBarHomeClicked = False";
+ //BA.debugLineNum = 39;BA.debugLine="ActionBarHomeClicked = False";
 _actionbarhomeclicked = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 39;BA.debugLine="End Sub";
+ //BA.debugLineNum = 40;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
 b4a.bitdesing.tomapedidos.b4xpagesmanager _pm = null;
  //BA.debugLineNum = 27;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 28;BA.debugLine="Dim pm As B4XPagesManager";
+ //BA.debugLineNum = 29;BA.debugLine="Dim pm As B4XPagesManager";
 _pm = new b4a.bitdesing.tomapedidos.b4xpagesmanager();
- //BA.debugLineNum = 29;BA.debugLine="pm.Initialize(Activity)";
+ //BA.debugLineNum = 30;BA.debugLine="pm.Initialize(Activity)";
 _pm._initialize /*String*/ (mostCurrent.activityBA,mostCurrent._activity);
- //BA.debugLineNum = 30;BA.debugLine="End Sub";
+ //BA.debugLineNum = 31;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
- //BA.debugLineNum = 41;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
- //BA.debugLineNum = 42;BA.debugLine="Return B4XPages.Delegate.Activity_KeyPress(KeyCod";
+ //BA.debugLineNum = 42;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 43;BA.debugLine="Return B4XPages.Delegate.Activity_KeyPress(KeyCod";
 if (true) return mostCurrent._b4xpages._delegate /*b4a.bitdesing.tomapedidos.b4xpagesdelegator*/ ._activity_keypress /*boolean*/ (_keycode);
- //BA.debugLineNum = 43;BA.debugLine="End Sub";
+ //BA.debugLineNum = 44;BA.debugLine="End Sub";
 return false;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 49;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 50;BA.debugLine="B4XPages.Delegate.Activity_Pause";
+ //BA.debugLineNum = 50;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 51;BA.debugLine="B4XPages.Delegate.Activity_Pause";
 mostCurrent._b4xpages._delegate /*b4a.bitdesing.tomapedidos.b4xpagesdelegator*/ ._activity_pause /*String*/ ();
- //BA.debugLineNum = 51;BA.debugLine="End Sub";
+ //BA.debugLineNum = 52;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_permissionresult(String _permission,boolean _result) throws Exception{
- //BA.debugLineNum = 53;BA.debugLine="Sub Activity_PermissionResult (Permission As Strin";
- //BA.debugLineNum = 54;BA.debugLine="B4XPages.Delegate.Activity_PermissionResult(Permi";
+ //BA.debugLineNum = 54;BA.debugLine="Sub Activity_PermissionResult (Permission As Strin";
+ //BA.debugLineNum = 55;BA.debugLine="B4XPages.Delegate.Activity_PermissionResult(Permi";
 mostCurrent._b4xpages._delegate /*b4a.bitdesing.tomapedidos.b4xpagesdelegator*/ ._activity_permissionresult /*String*/ (_permission,_result);
- //BA.debugLineNum = 55;BA.debugLine="End Sub";
+ //BA.debugLineNum = 56;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 45;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 46;BA.debugLine="B4XPages.Delegate.Activity_Resume";
+ //BA.debugLineNum = 46;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 47;BA.debugLine="B4XPages.Delegate.Activity_Resume";
 mostCurrent._b4xpages._delegate /*b4a.bitdesing.tomapedidos.b4xpagesdelegator*/ ._activity_resume /*String*/ ();
- //BA.debugLineNum = 47;BA.debugLine="End Sub";
+ //BA.debugLineNum = 48;BA.debugLine="End Sub";
 return "";
 }
 public static String  _create_menu(Object _menu) throws Exception{
- //BA.debugLineNum = 57;BA.debugLine="Sub Create_Menu (Menu As Object)";
- //BA.debugLineNum = 58;BA.debugLine="B4XPages.Delegate.Create_Menu(Menu)";
+ //BA.debugLineNum = 58;BA.debugLine="Sub Create_Menu (Menu As Object)";
+ //BA.debugLineNum = 59;BA.debugLine="B4XPages.Delegate.Create_Menu(Menu)";
 mostCurrent._b4xpages._delegate /*b4a.bitdesing.tomapedidos.b4xpagesdelegator*/ ._create_menu /*String*/ (_menu);
- //BA.debugLineNum = 59;BA.debugLine="End Sub";
+ //BA.debugLineNum = 60;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -419,6 +420,7 @@ main._process_globals();
 starter._process_globals();
 b4xpages._process_globals();
 b4xcollections._process_globals();
+httputils2service._process_globals();
 xuiviewsutils._process_globals();
 		
         } catch (Exception e) {
